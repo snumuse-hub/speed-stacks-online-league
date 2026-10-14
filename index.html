@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#101720">
+<title>2026년 2학기 스포츠 스태킹 온라인 리그전 · 1차 시안</title>
+<style>
+:root{--ink:#253044;--muted:#637083;--cream:#fff8ed;--white:#fff;--orange:#ff681f;--gold:#ffbc24;--red:#f24948;--mint:#2dbd8a;--shadow:0 12px 36px rgba(166,75,21,.11);--line:#f1e1d0;--round:24px;font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:linear-gradient(175deg,#fff1d4 0%,#fffaf0 34%,#fff3e5 100%);min-height:100vh;font-size:15px}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.48;cursor:not-allowed}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #ffb232;outline-offset:2px}.wrap{max-width:1060px;margin:auto;padding:22px 20px 90px}.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#ff4e24,#ff8b19 55%,#ffc533);color:white;border-radius:32px;padding:32px 34px 30px;box-shadow:0 20px 45px rgba(241,89,29,.25)}.hero:after{content:'🏆';position:absolute;right:4%;top:14%;font-size:130px;line-height:1;opacity:.16;transform:rotate(-16deg)}.eyebrow{display:inline-flex;align-items:center;gap:8px;border-radius:40px;background:#ffffff2d;border:1px solid #ffffff55;padding:6px 12px;font-size:12px;font-weight:800;letter-spacing:.04em}.hero h1{position:relative;z-index:1;font-size:clamp(25px,4.2vw,43px);line-height:1.35;margin:12px 0 8px;letter-spacing:-.05em}.hero p{font-size:clamp(13px,2vw,16px);margin:0;opacity:.96}.heroPills{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.heroPills span{border-radius:22px;padding:7px 11px;background:#fff;color:#db4d1c;font-size:12px;font-weight:800}.demo{background:#fff3ce;border:1px solid #ffd776;color:#805409;border-radius:15px;padding:11px 14px;margin:17px 0;font-size:12px;line-height:1.65}.card{background:#fff;border:1px solid #f5e5d4;border-radius:var(--round);padding:24px;box-shadow:var(--shadow);margin:16px 0}.card.soft{background:linear-gradient(140deg,#fff,#fffaf4)}h2,h3,h4{letter-spacing:-.035em}h2{font-size:22px;margin:0 0 8px}h3{font-size:18px;margin:0 0 10px}.sub{font-size:13px;color:var(--muted);line-height:1.6;margin:5px 0 16px}.row{display:flex;gap:12px;align-items:center}.space{justify-content:space-between}.grow{flex:1}.pill{background:#fff0dd;color:#bd4a16;border:1px solid #ffdec2;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:800}.rankTabs,.switchTabs,.events{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.chip{border:1px solid #f4d4bc;background:#fffaf3;color:#92562d;padding:10px 13px;border-radius:13px;font-size:13px;font-weight:800}.chip.active{background:linear-gradient(135deg,#ff6a20,#ff9940);color:white;border-color:transparent;box-shadow:0 5px 13px #ff713a42}.scoreTiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:16px 0}.scoreTile{background:linear-gradient(125deg,#fff6e5,#fff);border:1px solid #fee2c0;border-radius:16px;padding:13px;text-align:center}.scoreTile strong{display:block;font-size:24px;color:#ea611d}.scoreTile span{font-size:12px;color:var(--muted)}.tableScroll{overflow:auto;border:1px solid #f4e3d0;border-radius:17px}.rankTable{border-collapse:collapse;width:100%;font-size:13px;min-width:520px}.rankTable th{text-align:left;padding:13px 12px;background:#fff3e4;color:#95613e;white-space:nowrap;font-size:12px}.rankTable td{border-top:1px solid #f9ece0;padding:13px 12px;white-space:nowrap}.rankTable th:not(:first-child),.rankTable td:not(:first-child){text-align:right}.rankTable tbody tr:nth-child(odd){background:#fffdf9}.rankTable tbody tr:first-child{font-weight:850}.rankTable .schoolCell{text-align:left!important}.rankTable .muted{font-size:11px;color:var(--muted);font-weight:500}.rankTable b{color:#e75b24}.medal{font-size:20px}.loginArea{max-width:680px;margin:20px auto}.fieldGrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.fieldGrid.singleField{grid-template-columns:1fr}.field label,.fieldLabel{display:block;font-size:13px;font-weight:850;margin:0 0 8px}.field input,.field select,.field textarea{border:1.5px solid #f1d9c3;width:100%;padding:14px 15px;border-radius:13px;background:#fffdf9;color:var(--ink);min-height:48px}.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#ff8c36;box-shadow:0 0 0 3px #ff8c3327}.field .helper{color:var(--muted);font-size:11px;margin:6px 0 0}.field{margin-bottom:15px}.btn{border:none;border-radius:15px;padding:14px 20px;font-weight:900;min-height:49px;display:inline-flex;justify-content:center;align-items:center;gap:8px;transition:transform .13s,filter .13s;text-align:center}.btn:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.03)}.btn.primary{color:white;background:linear-gradient(105deg,#ff5529,#ff9d25);box-shadow:0 7px 15px #ed752932}.btn.gold{background:linear-gradient(105deg,#ffc12c,#ffdf60);color:#5d3510}.btn.red{background:#fff1ec;color:#db4928;border:1px solid #ffcbbb}.btn.outline{background:white;color:#bc5129;border:1.5px solid #ffcfad}.btn.dark{background:#253044;color:white}.btn.green{background:#1aab76;color:white}.btn.block{width:100%}.btn.small{padding:9px 11px;min-height:38px;font-size:12px}.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 15px}.identity{font-size:12px;background:#fff;border:1px solid #f0d3bd;border-radius:20px;padding:8px 12px;color:#7e4927;font-weight:800}.selectCards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.optionCard{border:2px solid #f6dec7;background:#fffaf5;border-radius:23px;text-align:center;padding:29px 15px 22px;display:flex;flex-direction:column;gap:8px;align-items:center;min-height:180px;color:var(--ink)}.optionCard:hover{border-color:#ff9b40;background:#fff4e6}.optionCard .emoji{font-size:39px}.optionCard strong{font-size:18px}.optionCard p{font-size:12px;color:var(--muted);margin:0;line-height:1.55}.eventGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.eventBtn{border:1.5px solid #f5d5b7;background:#fff8ec;border-radius:15px;min-height:76px;padding:10px 7px;color:#7f4e29}.eventBtn b{display:block;font-size:17px}.eventBtn span{display:block;font-size:10px;margin-top:4px}.eventBtn.active{background:#ff6724;color:white;border-color:#ff6724}.modeRow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.modeChoice{border:2px solid #f2ddcb;border-radius:16px;padding:14px;background:#fffdf8;text-align:left;color:#514239;font-weight:800}.modeChoice small{display:block;color:#827368;font-weight:500;margin-top:4px;font-size:12px}.modeChoice.active{border-color:#ff8b31;background:#fff2dd}.cameraShell{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:22px;background:#223144;margin:16px 0}.cameraShell video,.cameraShell canvas{position:absolute;width:100%;height:100%;top:0;left:0;object-fit:contain}.cameraShell canvas{pointer-events:none}.cameraEmpty{color:#ffdf91;position:absolute;inset:0;display:grid;align-content:center;justify-items:center;text-align:center;gap:8px;font-size:14px;padding:10px}.cameraEmpty strong{font-size:18px}.cameraIndicator{position:absolute;left:12px;top:12px;background:#15243ac9;color:#fff;padding:7px 12px;border-radius:12px;font-weight:800;font-size:12px}.timer{font-variant-numeric:tabular-nums;font-size:clamp(58px,9vw,93px);font-weight:1000;letter-spacing:-.07em;line-height:1.08;color:#ff6921;text-align:center;margin:12px 0}.timer small{font-size:20px;color:#a96e42;margin-left:4px}.status{background:#fff4de;border-radius:16px;padding:13px;text-align:center;color:#805426;font-weight:850;min-height:47px}.status.good{background:#dcf9e8;color:#137c4d}.status.live{background:#ffe8dd;color:#c64221}.toolRow{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.hint{font-size:12px;line-height:1.65;color:#776d63}.dangerNote{padding:11px 13px;border-radius:13px;background:#fff5e7;color:#82562b;border:1px solid #ffe0aa;font-size:12px;line-height:1.6}.resultHero{background:linear-gradient(120deg,#fff0d3,#fff8ea);border-radius:19px;padding:23px;text-align:center;border:1px solid #ffdaa5}.resultHero .bigTime{font-size:60px;font-weight:1000;color:#f26020;letter-spacing:-.055em;line-height:1.3}.resultHero .bigTime small{font-size:20px}.resultHero .congrats{font-weight:800;color:#d45a22}.resultsGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{background:#fffaf2;border:1px solid #f5dfc5;padding:17px;border-radius:20px;min-width:0}.panel h3{font-size:15px}.topList,.historyScroll{max-height:238px;overflow-y:auto;overscroll-behavior:contain;padding-right:5px;scrollbar-color:#ff9c5d #fff0df}.topRow,.historyRow{display:flex;align-items:center;justify-content:space-between;gap:7px;border-bottom:1px solid #f0dfcc;padding:10px 4px;font-size:13px}.topRow:last-child,.historyRow:last-child{border-bottom:0}.topRow b{color:#e85b22}.tag{background:#ffedcf;border-radius:8px;padding:4px 6px;font-size:10px;color:#a65a18;font-weight:800}.graphSvg{width:100%;height:auto;max-height:238px;display:block}.historyScroll{max-height:198px}.actionGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.badge{display:inline-flex;align-items:center;border-radius:40px;background:#ffecd2;color:#bb5b1e;padding:5px 10px;font-size:11px;font-weight:900}.coachOptions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.coachOpt{display:flex;gap:9px;align-items:center;text-align:left;padding:13px;border-radius:13px;background:#fffbf6;border:1.5px solid #f2dcc6;color:var(--ink);font-weight:750;font-size:12px}.coachOpt.active{border-color:#f86b2f;background:#fff0dc}.coachOpt input{accent-color:#ff6527}.coachBox{background:#fff2d9;border-radius:18px;padding:16px;line-height:1.75;font-size:13px}.coachBox strong{color:#bc4b1c}.muted{color:var(--muted)}.hidden{display:none!important}.foot{text-align:center;color:#9f7c62;font-size:12px;margin-top:30px}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#253044;color:white;box-shadow:0 12px 40px #25304477;padding:13px 18px;border-radius:14px;font-size:13px;z-index:9999;max-width:min(92vw,500px);text-align:center;pointer-events:none}.teacherTag{border-radius:12px;background:#fff0d3;padding:10px;color:#a05220;font-weight:850;font-size:13px}.miniNum{font-variant-numeric:tabular-nums}.teacherControls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.teacherControls .field{margin:0}.linkText{color:#d35c28;font-weight:800;text-decoration:underline}.rankMobile{display:none}.rankMobileRow{background:#fff9ef;border:1px solid #f5e0c5;border-radius:16px;margin:8px 0;padding:12px 14px}.rankMobileRow .head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:14px;font-weight:850}.rankMobileRow .head b{color:#e75b24;font-size:18px}.rankMobileRow .breakdown{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;font-size:11px;color:#986e4d}.soundVal{font-weight:800;color:#f06b26}.mobileOnly{display:none}
+@media(max-width:760px){.rankDesktop{display:none}.rankMobile{display:block}.wrap{padding:12px 11px 80px}.hero{padding:24px 20px;border-radius:24px}.hero:after{font-size:90px;right:-13px}.hero h1{font-size:27px}.card{padding:17px;border-radius:21px}.card h2{font-size:20px}.selectCards{grid-template-columns:1fr;gap:10px}.optionCard{min-height:108px;flex-direction:row;text-align:left;padding:17px;align-items:center}.optionCard .emoji{font-size:35px}.optionCard strong{font-size:16px}.optionCard p{font-size:12px}.eventGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.resultsGrid{grid-template-columns:1fr}.actionGrid{grid-template-columns:1fr 1fr}.scoreTiles{gap:6px}.scoreTile{padding:11px 5px}.scoreTile strong{font-size:19px}.coachOptions{grid-template-columns:1fr}.fieldGrid{grid-template-columns:1fr;gap:0}.teacherControls{grid-template-columns:1fr}.heroPills{gap:6px}.heroPills span{font-size:10px}.desktopOnly{display:none}.mobileOnly{display:initial}}
+@media(max-width:390px){.rankTabs .chip{font-size:11px;padding:9px 10px}.eventGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.modeRow{grid-template-columns:1fr}.actionGrid{grid-template-columns:1fr}.hero h1{font-size:24px}}
+/* 선택 종목별 이전 기록: 기본 숨김, 버튼으로 접기/펼치기 */
+.aiHistoryToggle{margin:13px 0 0;min-height:50px;background:#fff5e6;border:2px solid #ffba73;border-radius:14px;color:#c84c13;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;cursor:pointer}
+.aiHistoryToggle[aria-expanded="true"]{background:#ffdb99;border-color:#ff943d}
+.aiHistoryToggle:hover{background:#ffedce}
+.aiHistoryPanel{margin-top:12px;background:linear-gradient(150deg,#fffefa,#fff7e8)}
+.aiHistoryPanel .historyScroll{max-height:238px;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.aiHistoryPanel .historyRow span{color:#745344}
+.aiHistoryPanel .historyRow b{color:#e65c23}
+.aiHistoryPanel .hint{font-size:12px;color:#816952}
+.historyRowSelect{cursor:pointer;justify-content:flex-start}.historyRowSelect input{accent-color:#ff852f;flex:0 0 auto}.historyRowSelect span{flex:1}.historyDelete{margin-top:12px}
+.rankExtra{margin-top:14px;border:1px solid #eed8c2;border-radius:15px;padding:12px;background:#fffdf8}.rankExtra>summary{font-weight:850;color:#ad501b;cursor:pointer;padding:10px}.rankExtraScroll{max-height:320px;overflow:auto;overscroll-behavior:contain}.myRank{display:flex;justify-content:space-between;padding:14px;border:1px solid #ffbf73;border-radius:13px;background:#ffedcf;margin-top:12px}.scoreTile strong{font-size:clamp(14px,2vw,21px);overflow-wrap:anywhere}
+
+/* 전체 화면 다크 테마와 읽기 편한 둥근 글꼴 */
+:root{--ink:#f2f5f8;--muted:#c0cad5;--cream:#111923;--white:#1b2632;--shadow:0 14px 36px rgba(0,0,0,.28);--line:#354455;font-family:'Jua','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif}
+body{background:#101720;color:#f2f5f8;font-size:16px}
+.hero{background:linear-gradient(135deg,#1b2735 0%,#25394b 58%,#344353 100%);border:1px solid #40546a;box-shadow:0 18px 42px rgba(0,0,0,.32)}
+.hero:after{opacity:.2}.heroPills span{background:#1a2734;color:#ffd18a;border:1px solid #526274}
+.demo{background:#272515;border-color:#66582d;color:#f2dda2}
+.card,.card.soft{background:#1a2531;border-color:#334252;color:#f2f5f8;box-shadow:var(--shadow)}
+.card.soft{background:#1d2935}
+.sub,.hint,.field .helper{color:#c0cad5}
+.pill,.badge,.tag{background:#342b20;color:#ffd28c;border-color:#67502f}
+.chip,.btn.outline{background:#24313e;color:#ecf1f6;border-color:#45596d}
+.chip.active{background:linear-gradient(135deg,#ff6a20,#ff9940);color:#fff;border-color:transparent}
+.scoreTile{background:#24313e;border-color:#3a4d60}.scoreTile span{color:#c0cad5}
+.tableScroll{border-color:#3a4b5d}.rankTable{color:#e9eef4}.rankTable th{background:#283746;color:#f2c98c}.rankTable td{border-color:#334252}.rankTable tbody tr:nth-child(odd){background:#202c38}.rankTable tbody tr:nth-child(even){background:#1a2531}.rankTable .muted{color:#b7c2ce}
+.field input,.field select,.field textarea{background:#111a23;color:#f2f5f8;border-color:#45596d}
+.field input::placeholder,.field textarea::placeholder{color:#98a7b7}
+.field select option{background:#17212b;color:#f2f5f8}
+.btn.dark{background:#0e151d;color:#f2f5f8}
+.btn.gold{background:linear-gradient(105deg,#ffc12c,#ffdf60);color:#33230a}
+.identity{background:#24313e;border-color:#45596d;color:#f0d5ad}
+.optionCard{background:#202c38;border-color:#3d5063;color:#f2f5f8}.optionCard:hover{background:#293847;border-color:#ffad59}
+.optionCard p{color:#c0cad5}
+.eventBtn{background:#202c38;color:#e9eef4;border-color:#46596b}.eventBtn.active{background:#ff6724;color:#fff;border-color:#ff6724}
+.modeChoice{background:#202c38;color:#f2f5f8;border-color:#415365}.modeChoice small{color:#c0cad5}.modeChoice.active{background:#3a3023;border-color:#ff9b47}
+.cameraShell{background:#101923}
+.status{background:#302a20;color:#f5dba9}.status.good{background:#123a2c;color:#b7f2ce}.status.live{background:#48271f;color:#ffd0bc}
+.dangerNote{background:#302a20;color:#f4dfaf;border-color:#665331}
+.resultHero{background:#273341;border-color:#685336}.resultHero .congrats{color:#ffc27d}
+.panel{background:#202c38;border-color:#3a4d60}
+.topRow,.historyRow{border-color:#374757}.topRow b,.aiHistoryPanel .historyRow b{color:#ffad71}
+.coachOpt{background:#202c38;border-color:#415365;color:#f2f5f8}.coachOpt.active{background:#3a3023;border-color:#ff8b50}
+.coachBox{background:#292b29;color:#f2f5f8}.coachBox strong{color:#ffc080}
+.foot{color:#aab6c3}.teacherTag{background:#342b20;color:#ffd28c}
+.rankMobileRow{background:#202c38;border-color:#3a4d60}.rankMobileRow .breakdown{color:#c0cad5}
+.aiHistoryToggle,.rankExtra,.rankExtra>summary,.myRank{background:#24313e;color:#f2f5f8;border-color:#46596b}
+.aiHistoryToggle[aria-expanded="true"]{background:#3a3023;border-color:#ff9b47}
+.aiHistoryPanel{background:#202c38}.aiHistoryPanel .historyRow span,.aiHistoryPanel .hint{color:#c0cad5}
+.rankExtra{background:#202c38}.rankExtra>summary{color:#ffd28c}.rankExtraScroll{color:#e9eef4}
+.myRank{background:#342b20;border-color:#80623a}
+.linkText{color:#ffc080}
+.coachPasteHint{margin:8px 0 12px;color:#ffd28c;font-size:15px;font-weight:800}
+.graphSvg text{fill:#d0dae4!important}.graphSvg line{stroke:#495969!important}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:#ffbd65}
+h2{font-size:24px}h3{font-size:19px}.sub{font-size:14px}.hint{font-size:13px}
+.field label,.fieldLabel{font-size:14px}.field .helper{font-size:12px}
+.chip{font-size:14px}.eventBtn b{font-size:18px}.eventBtn span{font-size:12px}
+.optionCard p{font-size:13px}.coachOpt{font-size:13px}.rankTable{font-size:14px}.rankTable th{font-size:13px}
+.foot{font-size:13px}
+@media(max-width:760px){.card h2{font-size:21px}.optionCard p{font-size:13px}.hero h1{font-size:28px}}
+
+
+/* 공식 리그와 연습 종목을 각각 별도 칸으로 묶음 */
+.eventSections{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,1fr);gap:14px;margin:12px 0}
+.eventGroup{min-width:0;padding:15px;border:1px solid #3a4d60;border-radius:18px;background:#202c38}
+.eventGroupTitle{margin:0 0 12px;color:#ffd28c;font-size:17px}
+.eventGroup .eventGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0}
+.eventGroup.practiceGroup .eventGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.eventBtn b{display:flex;align-items:center;justify-content:center;gap:7px;font-size:17px}
+.eventBtn .eventName{display:inline;margin:0;font-size:inherit;line-height:1.2}
+.stackCupIcon{flex:0 0 auto;width:25px;height:21px}
+.stackCupHeadingIcon{width:25px;height:18px;vertical-align:-4px;margin-right:5px}
+@media(max-width:760px){.eventSections{grid-template-columns:1fr}.eventGroup{padding:14px}}
+@media(max-width:390px){.eventGroup.officialGroup .eventGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+.teacherTimer{margin:12px 0}.teacherTimerControls{justify-content:center}.teacherTimerControls .btn{min-width:150px}
+.teacherMeasurePanel{margin:10px 0 18px}.teacherTrialPanel{margin-top:14px;background:#202c38}
+.teacherCandidateList{display:grid;gap:8px;margin:10px 0 14px}
+.teacherTrialRow{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #425569;border-radius:14px;background:#18232e;color:#f2f5f8}
+.teacherTrialRow.selected{border-color:#ffad59;background:#352f26}
+.teacherTrialRow input{width:20px;height:20px;accent-color:#ff8b31;flex:0 0 auto}
+.teacherTrialDetails{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%}
+.teacherTrialDetails strong{font-size:20px;color:#ffd28c}.teacherTrialMeta{font-size:12px;color:#c0cad5}
+.teacherTrialSaved{font-size:12px;color:#9de1b9;font-weight:800}
+.savingOverlay{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:20px;background:rgba(3,8,13,.78);backdrop-filter:blur(4px)}
+.savingDialog{width:min(100%,390px);padding:26px 22px;text-align:center;border:1px solid #485c70;border-radius:22px;background:#1a2531;color:#f2f5f8;box-shadow:0 24px 70px #0009}
+.savingDialog h2{margin:12px 0 8px;font-size:22px}.savingDialog p{color:#d0d9e2;line-height:1.6;margin:0 0 18px;overflow-wrap:anywhere}
+.savingSpinner{width:42px;height:42px;margin:auto;border:4px solid #526477;border-top-color:#ffad59;border-radius:50%;animation:teacherSaveSpin .8s linear infinite}
+@keyframes teacherSaveSpin{to{transform:rotate(360deg)}}
+@media(max-width:760px){.teacherMeasureModes{grid-template-columns:1fr}.teacherTrialDetails strong{font-size:18px}.teacherTimerControls{flex-direction:column}.teacherTimerControls .btn{width:100%}}
+
+
+/* 주차별 순위와 짧은 추가 순위 스크롤 */
+.rankPeriodControls{display:grid;gap:8px;margin:10px 0 14px}
+.rankPeriodChoices,.rankWeekChoices{display:flex;flex-wrap:wrap;gap:7px}
+.rankWeekChoices .chip{font-size:12px;padding:8px 10px}
+.rankPeriodLabel{margin:0;font-size:12px}
+.rankTileDetail{display:block!important;margin-top:6px;font-size:11px!important;line-height:1.45;color:var(--muted)}
+.rankTileMetric{display:block;margin-top:5px;font-size:18px!important}
+.rankExtraScroll{max-height:230px;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.rankExtraScroll .rankTable th,.rankExtraScroll .rankTable td{padding-top:7px;padding-bottom:7px;font-size:12px}
+@media(max-width:760px){.rankExtraScroll{max-height:210px}.rankWeekChoices .chip{padding:7px 9px}}
+/* 승인된 홈 입장 버튼 및 교사 관리 화면 */
+.homeEntryChoices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:680px;margin:22px auto}
+.homeEntry{min-height:190px;border-radius:23px;padding:22px 10px;border:1px solid #ffc894;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;font-family:inherit;text-align:center;background:linear-gradient(145deg,#ffdbb1,#ffc38b);color:#52351d;box-shadow:var(--shadow)}
+.homeEntry strong{font-size:22px;line-height:1.35}.homeEntry>span:last-child{font-size:14px;line-height:1.6}.homeEntryEmoji{font-size:36px}.homeEntry.teacherEntry{background:linear-gradient(145deg,#9ad9de,#6db7c7);color:#193e49;border-color:#a4d8e3}
+.adminMenus{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.adminMenus .optionCard{min-height:140px;padding:20px 10px;flex-direction:column;text-align:center}.adminMenus .optionCard strong{font-size:17px}
+.adminNoteList{max-height:280px;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#ffba78 #202c38}.adminNoteRow{min-height:56px;border-bottom:1px solid #405365;padding:0 6px}.adminNoteRow summary{padding:16px 0;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#ffcf9f}.adminNoteRow form{padding:10px 0}.adminNoteRow input,.adminNoteRow textarea,.adminRecordRow input{width:100%;background:#111a23;color:#f2f5f8;border:1px solid #45596d;border-radius:10px;padding:12px;margin:8px 0 12px;font:inherit}.adminRecordRow{margin:12px 0}.adminRecordRow>div{margin-bottom:14px}.adminNotesPanel{margin-top:18px}.adminNotesPanel h3{margin-top:20px}
+@media(max-width:760px){.homeEntryChoices{gap:10px}.homeEntry{min-height:175px;padding:18px 8px}.homeEntry strong{font-size:20px}.homeEntry>span:last-child{font-size:13px}.adminMenus{grid-template-columns:1fr}.adminMenus .optionCard{min-height:80px;flex-direction:row;gap:15px;justify-content:flex-start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero" id="hero">
+<div class="eyebrow">🥤 STACKING LEAGUE 2026 · 2학기</div>
+<h1 style="font-size:20px">2026년 2학기<br>스포츠 스태킹 온라인 리그전</h1>
+<p style="font-size:12px">신월중 · 경원중 · 감계중 · 반림중 · 진영중 · 자유학교</p>
+<p>도전은 나의 성장으로, 참여는 우리의 승리로! 🌟</p>
+<div class="heroPills"><span>🏫 6개 학교</span><span>🏆 3개 리그 종목</span><span>📷 AI 자동 측정</span><span>💛 누구나 학교에 기여!</span></div>
+</header>
+<div class="demo" id="backendStatus">🧪 <b>1차 기능 시안</b> — 순위·학생·기록은 가상 예시이며, 이 HTML의 로그인·저장은 현재 브라우저 안에서만 작동합니다. 실제 학교 데이터, 구글 시트, 교사 인증 서버와는 연결되지 않습니다. 실사용 비밀번호를 입력하지 마세요.</div>
+<main>
+<section id="page-home">
+ <div class="card">
+ <div class="row space"><div><h2>🏆 두근두근! 리그 랭킹</h2><p class="sub">학교 종합 순위와 우리 친구들의 도전 기록을 확인해 보세요.</p></div><span class="pill" id="rankDataStatus">가상 데이터</span></div>
+ <div class="rankTabs" id="rankTabs"></div>
+ <div id="rankContent"></div>
+ <p class="sub" style="margin:14px 0 0">📌 학교 점수 = 기록 점수 60점 + 참가율 40점 · 학교 전체 학생 수 기준 · 같은 기록은 공동 순위</p>
+ </div>
+ <div class="homeEntryChoices">
+<button class="homeEntry studentEntry" type="button" data-admin="student"><span class="homeEntryEmoji">⏱️</span><strong>학생 기록<br>도전</strong><span>내 기록을 측정하고<br>성장에 도전해요 ✨</span></button>
+<button class="homeEntry teacherEntry" type="button" data-admin="open"><span class="homeEntryEmoji">👩‍🏫</span><strong>교사 관리<br>모드</strong><span>학생 기록과 수업을<br>함께 관리해요 📒</span></button>
+</div>
+<div class="card loginArea hidden" id="loginAnchor">
+ <h2>🔐 나도 도전할래!</h2><p class="sub">학교·닉네임·비밀번호로 로그인하고, 처음 가입할 때만 학년을 선택해요. 🐣</p>
+ <div class="switchTabs"><button type="button" class="chip active" data-auth="login">🔑 로그인</button><button type="button" class="chip" data-auth="join">🌱 처음 가입</button></div>
+ <form id="authForm">
+ <div class="fieldGrid" id="authFieldGrid"><div class="field"><label for="authSchool">🏫 학교</label><select id="authSchool" required></select></div><div class="field" id="authGradeField"><label for="authGrade">🎒 학년</label><select id="authGrade" required><option value="1">1학년</option><option value="2">2학년</option><option value="3">3학년</option></select></div></div>
+ <div class="field"><label for="authNick">😊 닉네임</label><input id="authNick" maxlength="16" autocomplete="off" placeholder="예: 번개컵" required><p class="helper">같은 학교에서 닉네임 중복 불가 · 실명·학번은 사용하지 마세요.</p></div>
+ <div class="field"><label for="authPin">🔢 숫자 비밀번호 4자리</label><input id="authPin" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" placeholder="● ● ● ●" required><p class="helper">4자리 비밀번호는 서버에 해시 형태로 저장됩니다. 다른 서비스에서 사용하는 비밀번호는 입력하지 마세요.</p></div>
+ <button class="btn primary block" id="authSubmit" type="submit">🚀 로그인하고 도전하기</button><p class="sub" id="authMessage" role="status" style="margin:8px 0 0"></p>
+ </form>
+ </div>
+</section>
+<section id="page-admin" class="hidden">
+ <div class="nav"><button class="btn outline small" type="button" data-admin="home">← 순위 보기</button><span class="identity" id="adminIdentity">👩‍🏫 교사 관리 모드</span><button class="btn red small hidden" type="button" id="adminExit">관리 종료</button></div>
+ <div class="card" id="adminGate"><h2>👩‍🏫 교사 관리 모드</h2><p class="sub">학교를 선택하고 관리번호로 입장해 주세요.</p><form id="adminAuthForm"><div class="field"><label for="adminSchool">🏫 학교 선택</label><select id="adminSchool" required></select></div><div class="field"><label for="adminCode">🔐 관리번호</label><input id="adminCode" type="password" maxlength="100" autocomplete="off" required placeholder="교사 관리번호 입력"></div><button class="btn primary block" id="adminAuthSubmit">🔓 관리모드 입장</button><p class="hint" id="adminAuthStatus" role="status"></p></form></div>
+ <div id="adminBody" class="hidden"><div class="card"><h2 id="adminSchoolTitle">🏫 우리 학교 관리</h2><div class="adminMenus"><button class="optionCard" type="button" data-admin="measure"><span class="emoji">⏱️</span><strong>학생 측정하기</strong></button><button class="optionCard" type="button" data-admin="edit"><span class="emoji">📝</span><strong>학생 기록 수정</strong></button><button class="optionCard" type="button" data-admin="population"><span class="emoji">👥</span><strong>참가학생수 수정</strong></button></div></div>
+ <div class="card hidden" id="adminStudentPanel"><h2 id="adminTaskTitle">⏱️ 학생 측정하기</h2><form id="adminLookupForm"><div class="field"><label for="adminNick">😊 학생 닉네임</label><input id="adminNick" maxlength="16" autocomplete="off" required placeholder="해당 학교 학생의 닉네임"></div><button class="btn outline" id="adminLookupSubmit">🔎 학생 조회</button></form><p class="sub" id="adminStudentStatus" role="status"></p><div id="adminEditArea" class="hidden"><h3>📋 학생 측정기록</h3><div id="adminRecordList"></div></div><div id="adminEditNotes" class="hidden"></div></div>
+ <div class="card hidden" id="adminPopulationPanel"><h2>👥 참가학생수 수정</h2><p class="sub">선택한 학교의 전체 참가학생 수를 수정합니다.</p><form id="adminPopulationForm"><div class="field"><label for="adminPopulation">🏫 전체 참가학생 수</label><input id="adminPopulation" type="number" min="1" max="20000" required></div><button class="btn primary" id="adminPopulationSave">💾 인원수 저장</button></form></div>
+ </div>
+</section>
+
+<section id="page-choice" class="hidden">
+ <div class="nav"><button class="btn outline small" type="button" data-action="home">← 순위 보기</button><span class="identity" id="choiceIdentity"></span><button class="btn red small" type="button" data-action="logout">로그아웃</button></div>
+ <div class="card"><h2>🥳 오늘은 어떻게 도전할까요?</h2><p class="sub">방법을 선택하면 종목 선택과 측정 화면으로 이동합니다.</p>
+ <div class="selectCards">
+ <button type="button" class="optionCard" data-action="ai"><span class="emoji">📸</span><div><strong>AI 측정</strong><p>손 위치 인식 · 자동 타이머<br>준비·종료 신호음 🔊</p></div></button>
+ <button type="button" class="optionCard" data-action="teacher"><span class="emoji">👩‍🏫</span><div><strong>선생님과 측정</strong><p>스택스 타이머 측정 후<br>선생님이 기록 입력</p></div></button>
+ <button type="button" class="optionCard" data-action="coach"><span class="emoji">🤖</span><div><strong>기록 확인 및 코칭 받기</strong><p>종목별 누적 그래프 · BEST 5<br>맞춤형 AI 연습 코칭</p></div></button>
+ </div></div>
+ <div class="card soft"><h3>📊 나의 현재 기록</h3><div id="choiceSummary" class="scoreTiles"></div><p class="sub">공식 리그 3종목만 개인 종합점수에 반영됩니다. 6-6과 1-10-1은 연습용 종목입니다.</p></div>
+</section>
+<section id="page-ai" class="hidden">
+ <div class="nav"><button class="btn outline small" type="button" data-action="choice">← 측정 방식 선택</button><span class="identity" id="aiIdentity"></span></div>
+ <div class="card"><h2>📸 AI 자동 측정</h2><p class="sub">양손을 하단 시작 영역에 0.7초 놓으면 <b>준비 신호음</b>이 나옵니다. 손을 떼면 측정이 시작되고, 양손이 다시 돌아오면 <b>종료 신호음</b>이 울립니다.</p>
+ <h3><svg class="stackCupHeadingIcon" viewBox="0 0 24 16" aria-hidden="true"><path d="M8 1h8l-1.2 5H9.2L8 1Z" fill="#ffc857" stroke="#14202b" stroke-width=".5" stroke-linejoin="round"/><path d="M2 9h8l-1.2 5H3.2L2 9Z" fill="#ff7658" stroke="#14202b" stroke-width=".5" stroke-linejoin="round"/><path d="M14 9h8l-1.2 5h-5.6L14 9Z" fill="#57d1c0" stroke="#14202b" stroke-width=".5" stroke-linejoin="round"/></svg>1. 측정 종목</h3><div class="eventSections" id="aiEvents"></div>
+ <button class="aiHistoryToggle" id="aiHistoryToggle" type="button" aria-controls="aiHistoryPanel" aria-expanded="false">📈 이전 기록 보기 <span id="aiHistoryArrow" aria-hidden="true">▾</span></button>
+ <div id="aiHistoryPanel" class="panel aiHistoryPanel hidden">
+   <h3 id="aiHistoryTitle">📈 종목별 이전 기록 그래프</h3>
+   <p class="hint">최근 최대 10회 기록 · 낮을수록 좋은 기록</p>
+   <div id="aiHistoryGraph"></div>
+   <h3 style="margin-top:16px">📅 날짜별 기록 현황</h3>
+   <p class="hint">최신 기록부터 표시 · 기록이 많으면 아래 목록을 스크롤하세요.</p>
+   <div id="aiHistoryList" class="historyScroll" role="region" aria-label="선택 종목 날짜별 기록 목록" tabindex="0"></div>
+   <button class="btn primary historyDelete" id="aiHistoryRegister" type="button" disabled>선택 기록을 공식 기록으로 등록</button>
+   <button class="btn red historyDelete" id="aiHistoryDelete" type="button" disabled>선택 기록 삭제</button>
+ </div>
+ <h3 style="margin-top:23px">✍️ 2. 기록하기</h3><div class="modeRow"><button class="modeChoice" type="button" data-save-mode="auto">⚡ 자동저장<small>정상 종료 시 시안 기록에 저장</small></button><button class="modeChoice active" type="button" data-save-mode="confirm">✅ 확인 후 저장<small>측정값을 확인하고 저장/취소</small></button></div>
+ <div class="cameraShell" id="cameraShell"><video id="camVideo" playsinline muted autoplay></video><canvas id="camCanvas"></canvas><div class="cameraEmpty" id="cameraEmpty"><span style="font-size:43px">📷</span><strong>카메라를 켜 주세요!</strong><span>양손이 들어오는 곳을 인식해요</span></div><span class="cameraIndicator" id="cameraLabel">카메라 꺼짐</span></div>
+ <div class="timer" id="cameraTime">0.000<small>초</small></div><div class="status" id="cameraStatus" role="status">카메라를 켜고 측정을 준비해 주세요.</div>
+ <div class="toolRow"><button class="btn primary" id="cameraToggle" type="button">📷 카메라 켜기</button><button class="btn outline" id="cameraFlip" type="button" disabled>🔁 카메라 전환</button><button class="btn outline" id="cameraSoundTest" type="button">🔊 신호음 테스트</button><button class="btn red" id="cameraReset" type="button">↻ 다시 준비</button></div>
+ <div class="row" style="flex-wrap:wrap;gap:14px"><label for="soundVolume" class="fieldLabel" style="margin:0">🔊 신호음 크기 <span id="soundVolumeLabel" class="soundVal">85%</span></label><input type="range" min="20" max="100" value="85" id="soundVolume" style="flex:1;max-width:220px;accent-color:#fa6c24"><span class="hint">기기 자체 볼륨도 올려 주세요.</span></div>
+ <div class="dangerNote" style="margin-top:15px">⚠️ 카메라 AI는 현재 <b>손 위치로 시작·종료를 추정</b>합니다. 컵 배열·규칙 준수는 판정하지 못합니다. 이 시안의 저장 결과는 공식 리그 기록으로 인정되지 않습니다. HTTPS 또는 localhost에서 카메라 사용을 권장합니다.</div>
+ <div id="cameraPending" class="panel hidden" style="margin-top:13px"><h3>✅ 기록 확인 후 저장</h3><div class="row space"><strong id="pendingTime" style="font-size:28px;color:#e15f1d">0.000초</strong><span class="badge" id="pendingEvent"></span></div><p class="hint">시간을 확인한 뒤 저장하거나 버리세요.</p><div class="toolRow"><button class="btn green" type="button" id="pendingSave">💾 기록 저장</button><button class="btn outline" type="button" id="pendingDiscard">🗑️ 취소하고 다시 측정</button></div></div>
+ <details style="margin-top:15px"><summary class="linkText">🧪 카메라 테스트가 어려운 환경에서 동작 확인</summary><p class="hint">카메라가 없는 PC에서도 화면 흐름과 신호음을 시험할 수 있습니다. 여기서 만든 기록은 <b>테스트 기록</b>으로만 저장됩니다.</p><div class="toolRow"><button class="btn outline small" type="button" id="testStart">▶ 테스트 타이머 시작</button><button class="btn red small" type="button" id="testStop">■ 테스트 종료</button></div></details>
+ </div>
+</section>
+<section id="page-teacher" class="hidden">
+ <div id="adminMeasureNav" class="nav hidden"><button class="btn outline small" type="button" data-admin="menu">← 교사 관리 메뉴</button><button class="btn outline small" type="button" data-admin="next">🙋 다른 학생 조회</button></div>
+ <div class="nav"><button class="btn outline small" type="button" data-action="choice">← 측정 방식 선택</button><span class="identity" id="teacherIdentity"></span></div>
+ <div class="card"><h2>👩‍🏫 선생님과 측정</h2><p class="sub">스택스 타이머로 시간을 측정한 뒤 교사가 직접 기록을 입력합니다.</p>
+ <div id="teacherGate"><div class="teacherTag">🔒 교사 관리번호는 서버 인증으로 확인합니다.</div><div class="field" style="max-width:330px;margin-top:16px"><label for="teacherCode">교사 관리번호</label><input id="teacherCode" type="password" maxlength="100" autocomplete="off" placeholder="교사 관리번호 입력"><p class="hint">Google Sheets 연결 상태에서는 Apps Script에 등록된 실제 관리번호를 입력하세요. 체험용 번호는 연결 전 테스트 모드에서만 작동합니다.</p></div><button class="btn primary" type="button" id="teacherUnlock">🔓 기록 입력 시작</button><p id="teacherGateStatus" class="hint hidden" role="status" aria-live="polite" style="margin:12px 0 0;font-weight:800"></p></div>
+ <div id="teacherEntry" class="hidden"><div class="teacherTag">✅ 교사 인증 완료 · 학생: <span id="teacherStudentLabel"></span></div>
+ <h3 style="margin-top:20px"><svg class="stackCupHeadingIcon" viewBox="0 0 24 16" aria-hidden="true"><path d="M8 1h8l-1.2 5H9.2L8 1Z" fill="#ffc857" stroke="#14202b" stroke-width=".5" stroke-linejoin="round"/><path d="M2 9h8l-1.2 5H3.2L2 9Z" fill="#ff7658" stroke="#14202b" stroke-width=".5" stroke-linejoin="round"/><path d="M14 9h8l-1.2 5h-5.6L14 9Z" fill="#57d1c0" stroke="#14202b" stroke-width=".5" stroke-linejoin="round"/></svg>종목 선택</h3>
+ <div class="eventSections" id="teacherEvents"></div>
+ <button class="aiHistoryToggle" id="teacherHistoryToggle" type="button" aria-controls="teacherHistoryPanel" aria-expanded="false">📈 선택 종목 이전 기록 보기 <span id="teacherHistoryArrow" aria-hidden="true">▾</span></button>
+ <div id="teacherHistoryPanel" class="panel aiHistoryPanel hidden"><h3 id="teacherHistoryTitle">📈 종목별 이전 기록</h3><p class="hint">학생의 선택 종목 기록 · 낮을수록 좋은 기록</p><div id="teacherHistoryGraph"></div><h3 style="margin-top:16px">📅 날짜별 기록 현황</h3><div id="teacherHistoryList" class="historyScroll" role="region" aria-label="선택 종목 이전 기록 목록" tabindex="0"></div><button class="btn red historyDelete" id="teacherHistoryDelete" type="button" disabled>선택 기록 삭제</button></div>
+ <div class="field" style="margin-top:20px"><span class="fieldLabel">측정 방법</span><div class="modeRow teacherMeasureModes"><button class="modeChoice active" type="button" data-teacher-method="phone">📱 휴대폰 타이머<small>앱 안에서 시작·정지</small></button><button class="modeChoice" type="button" data-teacher-method="tablet">📟 패드 타이머<small>스태킹 타이머 기록 입력</small></button></div></div>
+ <div id="teacherPhonePanel" class="teacherMeasurePanel"><div class="timer teacherTimer"><span id="teacherTimerValue">0.000</span><small>초</small></div><div class="toolRow teacherTimerControls"><button class="btn primary" id="teacherTimerStart" type="button">▶ 시작</button><button class="btn red" id="teacherTimerStop" type="button" disabled>■ 정지하고 기록 추가</button></div><p class="hint">정지하면 임시 기록 목록에 추가됩니다. 저장할 기록을 선택해 공식 기록으로 등록하세요.</p></div>
+ <div id="teacherTabletPanel" class="teacherMeasurePanel hidden"><div class="field"><label for="teacherSeconds">⏱️ 패드에서 측정한 시간 (초)</label><input id="teacherSeconds" type="text" inputmode="decimal" placeholder="예: 8.245" style="max-width:280px"><p class="helper">소수 셋째 자리까지 입력하고 목록에 추가하세요.</p></div><button class="btn outline" id="teacherManualAdd" type="button">➕ 측정 기록 목록에 추가</button></div>
+ <div class="panel teacherTrialPanel"><h3>📋 측정 기록 목록</h3><p class="hint">목록에서 등록할 기록 하나를 선택하세요. 임시 기록은 이 브라우저 탭에 보관됩니다.</p><div id="teacherCandidateList" class="teacherCandidateList"></div><button class="btn primary" type="button" id="teacherSave" disabled>✅ 공식 기록으로 등록</button></div>
+ <div id="adminMeasureNotes" class="panel adminNotesPanel hidden"></div>
+ <button class="btn outline small" type="button" id="teacherSettings" style="margin:10px 0 0">⚙️ 학교별 학생 수</button>
+ </div>
+ <div class="panel hidden" id="teacherPopulation" style="margin-top:14px"><h3>⚙️ 학교별 전체 학생 수 (시안)</h3><p class="hint">학교 전체 학생 수는 학교별 참여율·기록점수의 분모로 활용됩니다. 여기서 변경하면 이 브라우저에서만 반영됩니다.</p><div id="populationFields" class="teacherControls"></div><button class="btn gold" type="button" id="populationSave" style="margin-top:14px">✅ 시안 설정 반영</button></div>
+ </div>
+</section>
+<section id="page-nextstudent" class="hidden"><div class="card loginArea"><h2>🙋 다음 학생 확인</h2><p class="sub">교사의 측정 세션은 유지하고, 다른 학생의 닉네임과 4자리 PIN으로 계정을 확인합니다.</p><form id="nextStudentForm"><div class="field"><label for="nextStudentNick">😊 다음 학생 닉네임</label><input id="nextStudentNick" required autocomplete="off"></div><div class="field"><label for="nextStudentPin">🔢 숫자 비밀번호 4자리</label><input id="nextStudentPin" required type="password" maxlength="4" inputmode="numeric" pattern="[0-9]{4}" autocomplete="off"></div><button class="btn primary block" type="submit">✅ 다음 학생 확인하고 측정</button></form><p class="hint">학교는 현재 교사 측정 세션의 학교로 고정됩니다. 학교가 바뀌면 교사 측정을 종료하고 새로 로그인해 주세요.</p><button class="btn outline small" type="button" data-action="teacher">← 돌아가기</button></div></section>
+<section id="page-result" class="hidden"><div class="card">
+ <div class="row space" style="flex-wrap:wrap"><div><h2>🎉 측정 기록 저장 완료!</h2><p class="sub">기록을 확인하고 다음 도전을 선택해 주세요.</p></div><span class="badge" id="resultSource"></span></div>
+ <div class="resultHero"><div class="sub" style="margin:0" id="resultEvent"></div><div class="bigTime" id="resultTime">0.000<small>초</small></div><div class="congrats" id="resultCongrats">🌟 멋진 도전이었어요!</div></div>
+ <div class="scoreTiles"><div class="scoreTile"><strong id="resultBest">—</strong><span>🏅 내 최고기록</span></div><div class="scoreTile"><strong id="resultCount">0회</strong><span>🥤 누적 측정</span></div><div class="scoreTile"><strong id="resultRank">—</strong><span>📊 종목 순위(시안)</span></div></div>
+ <div class="resultsGrid"><div class="panel"><h3>🌟 나의 최고기록 TOP 5</h3><div class="topList" id="resultTop5"></div></div><div class="panel"><h3>📈 최근 기록 변화</h3><p class="hint" style="margin-top:0">측정 순서대로 표시 · 낮을수록 좋은 기록</p><div id="resultGraph"></div></div></div>
+ <div class="panel" style="margin-top:14px"><div class="row space"><h3 style="margin:0">📜 해당 종목 전체 기록</h3><span class="pill">5개 이상은 스크롤 ↕</span></div><p class="hint" style="margin:7px 0">최근 저장 순서 · 화면 안에서 위아래로 스크롤할 수 있어요.</p><div class="historyScroll" id="resultHistory"></div></div>
+ <h3 style="margin-top:24px">🚀 다음엔 무엇을 할까요?</h3><div class="actionGrid"><button class="btn gold" type="button" data-action="next-event">🔁 다음 종목 측정</button><button class="btn primary" type="button" data-action="coach">🤖 AI 코칭 받기</button><button class="btn red" type="button" data-action="logout">🚪 로그아웃</button><button class="btn outline" type="button" data-action="next-student" id="resultNextStudent">🙋 다른 학생 등록</button></div>
+ </div></section>
+<section id="page-coach" class="hidden"><div class="nav"><button class="btn outline small" type="button" data-action="coach-back">← 돌아가기</button><span class="identity" id="coachIdentity"></span></div><div class="card">
+ <h2>🤖 기록 확인 및 AI 코칭 받기</h2><p class="sub">개인 기록과 어려움을 함께 전달하면 더욱 구체적으로 코칭받을 수 있어요. 😊</p>
+ <div class="field"><label for="coachEvent">🥤 코칭받을 종목</label><select id="coachEvent"></select></div><button class="btn primary block" id="coachShowRecords" type="button" style="margin-bottom:12px">📈 선택 종목 기록 확인</button><div id="coachRecords" class="panel hidden"><h3>📈 기록 누적 그래프</h3><div id="coachGraph"></div><h3>🏅 BEST 5 기록</h3><div id="coachBest5"></div></div><div id="coachPreview" class="coachBox"></div>
+ <h3 style="margin:23px 0 8px">🤔 어떤 부분이 어려웠나요?</h3><p class="hint">최대 2개를 선택하세요. 다른 내용이라면 기타에 직접 적어주세요.</p><div class="coachOptions" id="coachOptions"></div>
+ <div class="field hidden" id="coachOtherArea" style="margin-top:14px"><label for="coachOther">✏️ 기타 어려움</label><textarea id="coachOther" rows="3" maxlength="250" placeholder="예: 컵을 내릴 때 왼손이 자꾸 꼬여요."></textarea></div>
+ <div class="toolRow" style="margin-top:20px"><button class="btn primary" id="coachCopyOpen" type="button">📋 기록 복사하고 AI 코칭 받아보기</button><button class="btn outline" id="coachCopy" type="button">📋 기록만 복사</button><button class="btn outline" id="coachOpen" type="button">↗ ChatGPT만 열기</button></div>
+ <p class="coachPasteHint">💡 (복사된 내용을 입력창에 입력해 주세요.)</p>
+ <div class="dangerNote">🔒 이름·학번·학교명·비밀번호는 코칭 요청문에 포함되지 않습니다. 복사한 내용을 일반 ChatGPT 채팅창에 붙여넣고 전송하세요. 로그아웃 상태에서는 대화가 저장되지 않으며, 맞춤 GPT 이용에는 로그인이 필요합니다. 개인정보를 입력하지 마세요.</div>
+ <p style="font-size:13px;font-weight:850;color:#9c4d1e">👩‍🏫 연습 방법과 목표는 반드시 체육선생님과 의논하고 피드백을 받으세요.</p>
+ </div></section>
+</main><div class="foot" id="footerStatus">🥤 2026 스포츠 스태킹 온라인 리그전 · GAS 연결 전 테스트 모드</div>
+</div>
+<div id="teacherSavingPopup" class="savingOverlay hidden" role="dialog" aria-modal="true" aria-labelledby="teacherSavingTitle" aria-describedby="teacherSavingMessage"><div class="savingDialog"><div class="savingSpinner" id="teacherSavingSpinner" aria-hidden="true"></div><h2 id="teacherSavingTitle">기록을 안전하게 저장 중</h2><p id="teacherSavingMessage">선택한 공식 기록을 안전하게 저장하고 있습니다.</p><button class="btn primary hidden" id="teacherSavingClose" type="button">확인</button></div></div>
+<div id="toast" class="toast hidden" role="status"></div>
+<script>
+(()=>{'use strict';
+const SCHOOLS=['신월중','경원중','감계중','반림중','진영중','자유학교'];
+const EVENTS=['3-3-3','3-6-3','3-6-3C','6-6','1-10-1'];
+const OFFICIAL=EVENTS.slice(0,3);
+const LEAGUE_WEEKS=[
+ {start:'2026-09-28',end:'2026-10-04',label:'2026.09.28~2026.10.04'},
+ {start:'2026-10-05',end:'2026-10-11',label:'2026.10.05~2026.10.11'},
+ {start:'2026-10-12',end:'2026-10-18',label:'2026.10.12~2026.10.18'},
+ {start:'2026-10-19',end:'2026-10-25',label:'2026.10.19~2026.10.25'},
+ {start:'2026-10-26',end:'2026-11-01',label:'2026.10.26~2026.11.01'},
+ {start:'2026-11-02',end:'2026-11-08',label:'2026.11.02~2026.11.08'}
+];
+const CHATGPT_URL='https://chatgpt.com/';
+const STORE='stacking-league-2026-demo-v1';
+const GAS_URL='https://script.google.com/macros/s/AKfycbyhzYxs38a9mAjS8KFtdsHWS0wH241XEazyu5ARm2dRdI_na0NU2HaJ8zyDGUQpbHQ/exec'; // Google Apps Script 웹 앱
+const REMOTE=GAS_URL.startsWith('https://script.google.com/macros/s/');
+let studentToken='',teacherToken='',remoteBusy=false;
+// Google ContentService may intermittently return a broken redirect/404.
+// Read the response as data without Google account cookies. Fall back to JSONP
+// only when the browser cannot complete the CORS read.
+async function remoteFetchOnce(action,args={},timeoutMs=10000){
+ const controller=new AbortController();
+ const timer=setTimeout(()=>controller.abort(),timeoutMs);
+ const callback='stack_data';
+ try{
+  const url=GAS_URL+'?'+new URLSearchParams({action,...args,callback,nonce:Date.now()+'-'+Math.random().toString(36).slice(2)});
+  const response=await fetch(url,{mode:'cors',credentials:'omit',redirect:'follow',signal:controller.signal});
+  if(!response.ok)throw Error('Google 응답 HTTP '+response.status);
+  const text=(await response.text()).trim(),prefix=callback+'(';
+  if(!text.startsWith(prefix)||!text.endsWith(');'))throw Error('Google 서버가 올바른 데이터 대신 다른 페이지를 반환했습니다.');
+  return JSON.parse(text.slice(prefix.length,-2));
+ }finally{clearTimeout(timer);}
+}
+async function remoteReadOnce(action,args,timeoutMs){
+ try{return await remoteFetchOnce(action,args,timeoutMs);}
+ catch(error){return remoteGetOnce(action,args,timeoutMs);}
+}
+// Start a fresh JSONP request on read failure; never reuse a failed redirect URL.
+function remoteGetOnce(action,args={},timeoutMs=10000){
+ return new Promise((resolve,reject)=>{
+  const cb='stack_cb_'+Math.random().toString(36).slice(2),tag=document.createElement('script');
+  let settled=false;
+  const timer=setTimeout(()=>finish(new Error('서버 응답 시간 초과')),timeoutMs);
+  function finish(error,data){
+   if(settled)return;
+   settled=true;clearTimeout(timer);
+   if(error){
+    // Apps Script 응답이 제한 시간 뒤에 도착해도 이미 제거된 콜백을 호출하지 않도록 잠시 유지합니다.
+    window[cb]=()=>{};
+    setTimeout(()=>{delete window[cb];},120000);
+   }else{
+    delete window[cb];
+   }
+   tag.remove();
+   error?reject(error):resolve(data);
+  }
+  window[cb]=data=>finish(null,data);
+  tag.onerror=()=>finish(new Error('구글 서버 응답을 불러오지 못했습니다.'));
+  tag.src=GAS_URL+'?'+new URLSearchParams({action,...args,callback:cb,nonce:Date.now()+'-'+Math.random().toString(36).slice(2)});
+  document.head.append(tag);
+ });
+}
+async function remoteGet(action,args={},maxAttempts=3,timeoutOverrideMs=0){
+ let lastError;
+ for(let attempt=0;attempt<maxAttempts;attempt++){
+  try{
+   const timeout=timeoutOverrideMs||(action==='receipt'?5000:[9000,12000,15000][Math.min(attempt,2)]);
+   return await remoteReadOnce(action,args,timeout);
+  }catch(error){
+   lastError=error;
+   if(attempt+1<maxAttempts)await new Promise(done=>setTimeout(done,600*Math.pow(2,attempt)));
+  }
+ }
+ throw new Error('Google Apps Script 응답 실패: '+(lastError?.message||'연결 오류')+' ('+maxAttempts+'회 시도). 잠시 후 다시 시도해 주세요. 계속되면 웹 앱 배포 URL과 접근 권한을 확인해 주세요.');
+}
+async function remoteWrite(action,args={}){
+ if(!REMOTE)throw Error('Apps Script 웹앱 주소가 미설정 상태입니다.');
+ const requestId=args.requestId||'request-'+crypto.randomUUID();
+ const body=JSON.stringify({...args,action,requestId});
+ const isAuthRequest=action==='login'||action==='join';
+ // Login and signup need more time for a slow Google Sheets response.
+ async function sendWrite(){
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),isAuthRequest?30000:9500);
+  try{
+   await fetch(GAS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body,signal:controller.signal});
+  }catch(error){
+   // Receipt polling below is authoritative; do not treat this as a failed save yet.
+  }finally{clearTimeout(timeout);}
+ }
+ await sendWrite();
+ if(isAuthRequest){
+  let lastNetworkError=null,retried=false,waitMs=750;
+  const startedAt=Date.now(),deadline=startedAt+60000;
+  while(Date.now()<deadline){
+   await new Promise(done=>setTimeout(done,waitMs));
+   try{
+    const result=await remoteGet('receipt',{id:requestId},1,12000);
+    if(!result.pending){
+     if(!result.ok)throw Error(result.error||'구글 시트 요청 실패');
+     return result;
+    }
+   }catch(error){
+    if(!error.message.startsWith('Google Apps Script 응답 실패:'))throw error;
+    lastNetworkError=error;
+   }
+   if(!retried&&Date.now()-startedAt>=30000){await sendWrite();retried=true;}
+   waitMs=Math.min(Math.round(waitMs*1.5),4000);
+  }
+  throw Error('서버 처리 결과를 확인하지 못했습니다. '+(lastNetworkError?'Google 서버 통신 오류가 반복됩니다. ':'')+'기록 중복 방지를 위해 다시 시도하기 전 시트를 확인하세요.');
+ }
+ let lastNetworkError=null;
+ for(let i=0;i<35;i++){
+  await new Promise(done=>setTimeout(done,i<5?500:800));
+  try{
+   const result=await remoteGet('receipt',{id:requestId},1);
+   if(!result.pending){
+    if(!result.ok)throw Error(result.error||'구글 시트 요청 실패');
+    return result;
+   }
+  }catch(error){
+   if(!error.message.startsWith('Google Apps Script 응답 실패:'))throw error;
+   lastNetworkError=error;
+  }
+  if(i===11)await sendWrite();
+ }
+ throw Error('서버 처리 결과를 확인하지 못했습니다. '+(lastNetworkError?'Google 서버 통신 오류가 반복됩니다. ':'')+'기록 중복 방지를 위해 다시 시도하기 전 시트를 확인하세요.');
+}
+async function remoteRefresh(){
+ if(!REMOTE)return;
+ const d=await remoteGet('snapshot');if(!d.ok)throw Error(d.error||'동기화 실패');
+ users=d.users||[];records=d.records||[];setText('rankDataStatus','실제 기록');
+ for(const school of SCHOOLS)if(Number(d.schoolPop?.[school])>0)schoolPop[school]=Number(d.schoolPop[school]);
+ showRank();if(currentPage==='choice')renderChoice();
+}
+const COACH_FOOTER='연습 방법과 목표는 반드시 체육선생님과 의논하고 피드백을 받으세요.';
+const DIFFICULTIES=[['drop','🥤 컵을 자꾸 떨어뜨려요'],['order','🔀 동작 순서가 헷갈려요'],['six','🏗️ 6컵·10컵 쌓기가 어려워요'],['down','⚡ 컵을 내릴 때 잘 안돼요'],['hands','🙌 양손 움직임이 잘 맞지 않아요'],['speed','🐢 속도가 잘 빨라지지 않아요'],['variable','🎯 기록이 일정하지 않아요'],['nerves','😰 측정할 때 긴장돼요'],['unknown','🤔 어디가 문제인지 모르겠어요'],['other','✏️ 기타 (직접 작성)']];
+const $=id=>document.getElementById(id);
+const pages=['admin','home','choice','ai','teacher','nextstudent','result','coach'];
+let schoolPop={신월중:360,경원중:320,감계중:280,반림중:335,진영중:310,자유학교:0};
+let users=[],records=[],session=null,teacherVerified=false,teacherSchool='',currentPage='home',lastMode='ai',lastRecord=null,lastResultEvent='',selectedEvent='3-3-3',saveMode='confirm',rankMode='school',rankPeriod='week',rankWeek=currentLeagueWeek(),authMode='login',coachReturn='choice',coachSelections=[],cameraFacing='environment';
+let currentUserUid='',state='idle',stream=null,hands=null,cameraActive=false,cameraBusy=false,processing=false,cameraLoopId=0,handScriptPromise=null,clockStart=0,readyAt=0,leaveAt=0,returnAt=0,soundContext=null,testTimer=false,measureSource='AI',pendingMeasurement=null,autoSaveToken=0,frontMirror=false;
+let fakeCounter=0;
+let teacherCandidates=[],teacherSelectedCandidateId='',teacherMeasureMode='phone',teacherTimerActive=false,teacherTimerNeedsReset=false,teacherTimerStartedAt=0,teacherTimerRaf=0,teacherSaveBusy=false;
+let selectedHistoryRecordId='',historyDeleteBusy=false,aiRegisterBusy=false;
+function rand(){fakeCounter++;return (Math.sin(fakeCounter*29.13)*10000)%1;}
+function demoSeed(){const sampleUsers=[],sampleRecords=[];const schoolCaps=[22,19,18,23,20];const bases=[4.2,5.5,16.7,8.4,12.8];let number=0;
+ for(let s=0;s<SCHOOLS.length;s++){for(let i=0;i<schoolCaps[s];i++){number++;let uid='sample-'+number;sampleUsers.push({uid,school:SCHOOLS[s],grade:1+i%3,nick:['번개손','스택왕','컵고수','초고속','도전왕','반짝컵','리듬짱','컵마스터'][i%8]+'_'+(s+1)+String(i+1).padStart(2,'0'),demo:true});for(let e=0;e<3;e++){if((i+e)%9===0)continue;let base=bases[e]+((i*37+s*17+e*23)%50)/12+((s+e)%4)*.17;for(let k=0;k<2;k++)sampleRecords.push({id:'seed-'+uid+'-'+e+'-'+k,uid,event:EVENTS[e],sec:Number((base+k*.14+(i%3)*.05).toFixed(3)),at:new Date(2026,8,4+i%20,9+k).toISOString(),valid:true,source:'가상 기록'});}}}
+ return {sampleUsers,sampleRecords};}
+const demo=demoSeed();
+function load(){if(REMOTE)return;try{const saved=JSON.parse(localStorage.getItem(STORE)||'null');if(saved&&Array.isArray(saved.users)&&Array.isArray(saved.records)){users=saved.users.filter(u=>u&&!u.demo&&typeof u.uid==='string');records=saved.records.filter(r=>r&&!String(r.id).startsWith('seed-')&&Number(r.sec)>0);if(saved.schoolPop&&typeof saved.schoolPop==='object')for(const s of SCHOOLS){const p=Number(saved.schoolPop[s]);if(p>=1&&p<=20000)schoolPop[s]=Math.floor(p);}}}catch(e){toast('브라우저 테스트 기록을 불러오지 못했습니다.');}}
+function persist(){if(REMOTE)return;try{localStorage.setItem(STORE,JSON.stringify({users,records,schoolPop}));}catch(e){toast('브라우저 저장소에 기록을 저장하지 못했습니다.');}}
+function allUsers(){return REMOTE?users:[...demo.sampleUsers,...users];}function allRecords(){return REMOTE?records:[...demo.sampleRecords,...records];}
+function byId(uid){return allUsers().find(u=>u.uid===uid)||null;}function currentUser(){return byId(currentUserUid);}function uid(){return 'local-'+Date.now()+'-'+Math.random().toString(36).slice(2,9);}
+function fmt(n){return Number(n).toFixed(3);}function num(n){return Number.isFinite(Number(n))?Number(n):0;}
+function setText(id,v){const e=$(id);if(e)e.textContent=String(v);}
+function toast(s){const e=$('toast');e.textContent=s;e.classList.remove('hidden');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.add('hidden'),3500);}
+function showPage(n){if(!pages.includes(n))return;if(currentPage==='ai'&&n!=='ai')stopCamera();if(currentPage==='teacher'&&n!=='teacher'&&teacherTimerActive)stopTeacherTimer(true);currentPage=n;for(const x of pages)$('page-'+x).classList.toggle('hidden',x!==n);$('hero').classList.toggle('hidden',n!=='home');window.scrollTo({top:0,behavior:'instant'});}
+function holdIdentity(){let user=currentUser(),s=user?user.school+' · '+user.grade+'학년 · '+user.nick:'미로그인';for(const id of ['choiceIdentity','aiIdentity','teacherIdentity','coachIdentity'])setText(id,s);}
+function selectOptions(target,labels,empty){target.replaceChildren();if(empty){const opt=document.createElement('option');opt.value='';opt.textContent=empty;target.append(opt);}for(const v of labels){const o=document.createElement('option');o.value=v;o.textContent=v;target.append(o);}}
+function accountKey(s,n){return s+'|'+n.trim().toLowerCase();}
+async function pinDigest(pin,salt){const data=new TextEncoder().encode(salt+'|'+pin);if(window.crypto&&crypto.subtle){const hash=await crypto.subtle.digest('SHA-256',data);return Array.from(new Uint8Array(hash)).map(n=>n.toString(16).padStart(2,'0')).join('');}throw new Error('이 브라우저 환경에서 체험용 암호 검증을 지원하지 않습니다. HTTPS나 localhost로 열어주세요.');}
+async function checkPin(user,pin){if(!user||user.demo)return false;return (await pinDigest(pin,user.salt))===user.pinHash;}
+function renderAuth(){document.querySelectorAll('[data-auth]').forEach(e=>e.classList.toggle('active',e.dataset.auth===authMode));$('authGradeField').classList.toggle('hidden',authMode==='login');$('authFieldGrid').classList.toggle('singleField',authMode==='login');$('authGrade').required=authMode==='join';setText('authSubmit',authMode==='join'?'🌱 닉네임 만들고 시작하기':'🚀 로그인하고 도전하기');setText('authMessage','');}
+async function authSubmit(evt){
+ evt.preventDefault();if(REMOTE)return remoteAuth();
+ const school=$('authSchool').value,grade=Number($('authGrade').value),nick=$('authNick').value.trim(),pin=$('authPin').value,joining=authMode==='join';
+ if(!school||!nick||!/^[0-9]{4}$/.test(pin)){setText('authMessage','학교·닉네임·4자리 비밀번호를 확인해 주세요.');return;}
+ if(joining&&![1,2,3].includes(grade)){setText('authMessage','가입할 학년을 선택해 주세요.');return;}
+ try{
+  const existing=users.find(u=>accountKey(u.school,u.nick)===accountKey(school,nick));
+  if(joining){
+   if(existing){setText('authMessage','⚠️ 이미 이 학교에서 사용 중인 닉네임입니다. 닉네임을 수정해 주세요.');return;}
+   const salt=uid(),pinHash=await pinDigest(pin,salt),u={uid:uid(),school,grade,nick,salt,pinHash};users.push(u);persist();currentUserUid=u.uid;
+  }else{
+   if(!existing||!(await checkPin(existing,pin))){setText('authMessage','학교·닉네임·비밀번호가 일치하지 않습니다. 처음이라면 가입을 선택하세요.');return;}
+   currentUserUid=existing.uid;
+  }
+  session={uid:currentUserUid};$('authPin').value='';teacherVerified=false;teacherSchool='';holdIdentity();renderChoice();showPage('choice');toast('🎉 환영해요! 오늘도 즐겁게 도전해요.');
+ }catch(e){setText('authMessage','⚠️ '+e.message);}
+}
+async function remoteAuth(){
+ if(remoteBusy)return;
+ const school=$('authSchool').value,grade=Number($('authGrade').value),nick=$('authNick').value.trim(),pin=$('authPin').value,joining=authMode==='join';
+ if(!school||!nick||!/^[0-9]{4}$/.test(pin)){setText('authMessage','학교·닉네임·4자리 비밀번호를 확인해 주세요.');return;}
+ if(joining&&![1,2,3].includes(grade)){setText('authMessage','가입할 학년을 선택해 주세요.');return;}
+ remoteBusy=true;$('authSubmit').disabled=true;
+ try{
+  const payload={school,nick,pin};if(joining)payload.grade=grade;
+  const result=await remoteWrite(joining?'join':'login',payload);
+  const accountGrade=Number(result.grade||grade);
+  currentUserUid=result.uid;studentToken=result.token;session={uid:result.uid};
+  $('authPin').value='';teacherVerified=false;teacherToken='';
+  if(!users.some(user=>user.uid===result.uid))users.push({uid:result.uid,school,grade:accountGrade,nick});
+  holdIdentity();renderChoice();showPage('choice');toast(joining?'✅ 가입하고 로그인했습니다.':'✅ 로그인되었습니다.');
+  remoteRefresh().catch(error=>setText('backendStatus','⚠️ 로그인 성공 · 순위 갱신 지연: '+error.message));
+ }catch(err){
+  const message=String(err.message||err);
+  const connectionFailed=message.startsWith('Google Apps Script 응답 실패:')||message.startsWith('서버 처리 결과를 확인하지 못했습니다.');
+  const displayMessage=authMode==='login'&&connectionFailed
+   ?'구글 서버 연결 오류로 로그인을 확인하지 못했습니다. 닉네임·PIN이 틀렸다는 뜻은 아닙니다. 잠시 후 다시 시도해 주세요.'
+   :message;
+  setText('authMessage','⚠️ '+displayMessage);
+ }
+ finally{remoteBusy=false;$('authSubmit').disabled=false;}
+}
+function weekBounds(index){const w=LEAGUE_WEEKS[index-1];if(!w)return [Infinity,-Infinity];const [sy,sm,sd]=w.start.split('-').map(Number),[ey,em,ed]=w.end.split('-').map(Number);return [Date.UTC(sy,sm-1,sd)-9*3600000,Date.UTC(ey,em-1,ed+1)-9*3600000];}
+function currentLeagueWeek(){const now=Date.now();for(let i=0;i<LEAGUE_WEEKS.length;i++){const [start,end]=weekBounds(i+1);if(now>=start&&now<end)return i+1;}let latest=0;for(let i=0;i<LEAGUE_WEEKS.length;i++){if(now>=weekBounds(i+1)[0])latest=i+1;}return latest||1;}
+function leagueWeeksSoFar(){const now=Date.now();return LEAGUE_WEEKS.map((_,i)=>i+1).filter(i=>now>=weekBounds(i)[0]);}
+function recordInWeek(record,index){const at=Date.parse(record.at||'');if(!Number.isFinite(at))return false;const [start,end]=weekBounds(index);return at>=start&&at<end;}
+function rankData(){
+ const source=allRecords().filter(r=>r.valid!==false&&OFFICIAL.includes(r.event)&&Number(r.sec)>0);
+ const weeks=rankPeriod==='week'?[rankWeek]:leagueWeeksSoFar();
+ function calculateWeek(week){
+  const valid=source.filter(r=>recordInWeek(r,week)),bestByEvent={};
+  for(const e of OFFICIAL){
+   const best=new Map();
+   for(const r of valid.filter(x=>x.event===e)){if(!best.has(r.uid)||best.get(r.uid).sec>r.sec)best.set(r.uid,r);}
+   const sorted=[...best.values()].sort((a,b)=>a.sec-b.sec||a.uid.localeCompare(b.uid));let last=NaN,rank=0;
+   bestByEvent[e]=sorted.map((r,i)=>{if(!Number.isFinite(last)||Math.abs(r.sec-last)>=.0005)rank=i+1;last=r.sec;return {...r,rank,score:sorted.length===1?100:1+99*(sorted.length-rank)/(sorted.length-1),user:byId(r.uid)};});
+  }
+  const people=new Map();
+  for(const e of OFFICIAL)for(const entry of bestByEvent[e]){
+   if(!people.has(entry.uid))people.set(entry.uid,{uid:entry.uid,school:entry.user?.school||'',grade:entry.user?.grade||'',nick:entry.user?.nick||'',scores:Object.fromEntries(OFFICIAL.map(k=>[k,0]))});
+   people.get(entry.uid).scores[e]=entry.score;
+  }
+  let individuals=[...people.values()].map(u=>({...u,total:Object.values(u.scores).reduce((a,b)=>a+b,0)})).sort((a,b)=>b.total-a.total||a.uid.localeCompare(b.uid));
+  let last=NaN,rank=0;
+  individuals=individuals.map((u,i)=>{if(!Number.isFinite(last)||Math.abs(last-u.total)>.000001)rank=i+1;last=u.total;return {...u,rank};});
+  return {bestByEvent,individuals};
+ }
+ const snapshots=weeks.map(calculateWeek);
+ let bestByEvent={},individuals=[];
+ if(rankPeriod==='week'){
+  const snapshot=snapshots[0]||{bestByEvent:Object.fromEntries(OFFICIAL.map(e=>[e,[]])),individuals:[]};
+  bestByEvent=snapshot.bestByEvent;individuals=snapshot.individuals;
+ }else{
+  const aggregate=new Map();
+  for(const snapshot of snapshots)for(const e of OFFICIAL)for(const entry of snapshot.bestByEvent[e]){
+   if(!aggregate.has(entry.uid)){
+    const user=entry.user||byId(entry.uid);
+    aggregate.set(entry.uid,{uid:entry.uid,school:user?.school||'',grade:user?.grade||'',nick:user?.nick||'',scores:Object.fromEntries(OFFICIAL.map(k=>[k,0])),bestSecs:Object.fromEntries(OFFICIAL.map(k=>[k,Infinity]))});
+   }
+   const person=aggregate.get(entry.uid);person.scores[e]+=entry.score;person.bestSecs[e]=Math.min(person.bestSecs[e],Number(entry.sec));
+  }
+  individuals=[...aggregate.values()].map(person=>({...person,total:Object.values(person.scores).reduce((a,b)=>a+b,0)})).sort((a,b)=>b.total-a.total||a.uid.localeCompare(b.uid));
+  let last=NaN,rank=0;
+  individuals=individuals.map((person,i)=>{if(!Number.isFinite(last)||Math.abs(last-person.total)>.000001)rank=i+1;last=person.total;return {...person,rank};});
+  for(const e of OFFICIAL){
+   const items=individuals.filter(person=>person.scores[e]>0).map(person=>({uid:person.uid,school:person.school,grade:person.grade,nick:person.nick,score:person.scores[e],sec:person.bestSecs[e],user:byId(person.uid)})).sort((a,b)=>b.score-a.score||a.sec-b.sec||a.uid.localeCompare(b.uid));
+   let lastScore=NaN,eventRank=0;
+   bestByEvent[e]=items.map((item,i)=>{if(!Number.isFinite(lastScore)||Math.abs(lastScore-item.score)>.000001)eventRank=i+1;lastScore=item.score;return {...item,rank:eventRank};});
+  }
+ }
+ const schoolTotals=new Map(SCHOOLS.map(s=>[s,{recordScore:0,participationScore:0,pnum:0}]));
+ for(const snapshot of snapshots)for(const school of SCHOOLS){
+  const configuredPop=num(schoolPop[school]),tally=schoolTotals.get(school);
+  if(configuredPop<1)continue;
+  const students=snapshot.individuals.filter(p=>p.school===school),participantCount=students.length;
+  const eventPoints=students.reduce((sum,p)=>sum+p.total,0);
+  tally.recordScore+=Math.min(60,60*eventPoints/(configuredPop*300));
+  tally.participationScore+=40*Math.min(1,participantCount/configuredPop);
+  tally.pnum+=participantCount;
+ }
+ const weeksCount=rankPeriod==='week'?1:weeks.length,schools=SCHOOLS.map(school=>{
+  const configuredPop=num(schoolPop[school]),tally=schoolTotals.get(school);
+  if(configuredPop<1)return {school,pop:0,pnum:tally.pnum,recordScore:0,participationScore:0,total:0,needsPopulation:true};
+  return {school,pop:configuredPop,pnum:tally.pnum,recordScore:tally.recordScore,participationScore:tally.participationScore,total:tally.recordScore+tally.participationScore,needsPopulation:false};
+ }).sort((a,b)=>b.total-a.total||a.school.localeCompare(b.school));
+ return {bestByEvent,individuals,schools,weeksCount,weeks};
+}
+function td(value,cls){const e=document.createElement('td');if(cls)e.className=cls;e.textContent=value;return e;}function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
+function renderTable(columns,rows){const wrap=el('div','tableScroll'),table=el('table','rankTable'),thead=el('thead'),tr=el('tr');for(const c of columns)tr.append(el('th','',c));thead.append(tr);const tbody=el('tbody');for(const data of rows){const r=el('tr');data.forEach((s,i)=>r.append(td(s,i===0?'schoolCell':'')));tbody.append(r);}table.append(thead,tbody);wrap.append(table);return wrap;}
+function showRank(){
+ const tabs=[['school','🏫 학교 종합'],['overall','🏅 개인 종합'],['3-3-3','🥤 3-3-3'],['3-6-3','⚡ 3-6-3'],['3-6-3C','🔥 사이클']];
+ const holder=$('rankTabs');holder.replaceChildren();for(const [key,name] of tabs){const bt=el('button','chip'+(rankMode===key?' active':''),name);bt.type='button';bt.onclick=()=>{rankMode=key;showRank();};holder.append(bt);}
+ const c=$('rankContent');c.replaceChildren();const d=rankData(),limit=3;
+ const controls=el('div','rankPeriodControls'),periodRow=el('div','rankPeriodChoices');
+ for(const [key,label] of [['week','주간'],['cumulative','전체 누적']]){const button=el('button','chip'+(rankPeriod===key?' active':''),label);button.type='button';button.setAttribute('aria-pressed',String(rankPeriod===key));button.onclick=()=>{rankPeriod=key;showRank();};periodRow.append(button);}
+ controls.append(periodRow);
+ if(rankPeriod==='week'){
+  const weekRow=el('div','rankWeekChoices');
+  for(let i=1;i<=LEAGUE_WEEKS.length;i++){const button=el('button','chip'+(rankWeek===i?' active':''),i+'주차');button.type='button';button.setAttribute('aria-pressed',String(rankWeek===i));button.onclick=()=>{rankWeek=i;showRank();};weekRow.append(button);}
+  controls.append(weekRow);
+ }
+ const periodText=rankPeriod==='week'?rankWeek+'주차 · '+LEAGUE_WEEKS[rankWeek-1].label:('전체 누적 · '+(d.weeksCount?('1~'+d.weeksCount+'주차 · '+LEAGUE_WEEKS[0].label.slice(0,10)+'~'+LEAGUE_WEEKS[Math.max(0,d.weeksCount-1)].label.slice(11)): '시즌 시작 전'));
+ controls.append(el('p','sub rankPeriodLabel',periodText));c.append(controls);
+ let columns=[],rows=[],maxPoints=rankPeriod==='week'?1:d.weeksCount;
+ if(rankMode==='school'){
+  const recordMax=60*maxPoints,participationMax=40*maxPoints,totalMax=100*maxPoints;
+  columns=['순위','학교','기록 /'+recordMax,'참가 /'+participationMax,'합계 /'+totalMax];
+  rows=d.schools.map((x,i)=>[(i+1)+'위',x.school+(x.needsPopulation?' · 학생 수 입력 필요':''),x.needsPopulation?'—':x.recordScore.toFixed(1),x.needsPopulation?'—':x.participationScore.toFixed(1),x.needsPopulation?'—':x.total.toFixed(1)]);
+ }else if(rankMode==='overall'){
+  columns=['순위','닉네임 · 소속','3-3-3','3-6-3','사이클','개인합계 /'+(300*maxPoints)];
+  rows=d.individuals.map(x=>[x.rank+'위',x.nick+' · '+x.school+' '+x.grade+'학년',Number(x.scores['3-3-3']).toFixed(1)+'점',Number(x.scores['3-6-3']).toFixed(1)+'점',Number(x.scores['3-6-3C']).toFixed(1)+'점',x.total.toFixed(1)]);
+ }else{
+  columns=['순위','닉네임 · 소속',rankPeriod==='week'?'주간 기록':'최고기록',rankPeriod==='week'?'순위 점수':'누적 점수'];
+  rows=d.bestByEvent[rankMode].map(x=>[x.rank+'위',(x.user?.nick||x.nick||'')+' · '+(x.user?.school||x.school||'')+' '+(x.user?.grade||x.grade||'')+'학년',fmt(x.sec)+'초',x.score.toFixed(1)+'점']);
+ }
+ const tiles=el('div','scoreTiles');
+ for(const [i,row] of rows.slice(0,limit).entries()){
+  const tile=el('div','scoreTile'),position=['🥇','🥈','🥉'][i]+' '+row[0];
+  tile.append(el('span','rankTilePosition',position),el('strong','',rankMode==='school'?row[1].split(' · ')[0]:row[1].split(' · ')[0]));
+  let detail='',metric='';
+  if(rankMode==='school'){detail='기록 '+row[2]+'점 · 참가 '+row[3]+'점';metric=row[4]+'점';}
+  else if(rankMode==='overall'){
+   detail=OFFICIAL.map((event,index)=>event+' ('+row[index+2]+')').join(' · ');
+   metric=row[5]+'점';
+  }else{
+   detail=rankPeriod==='week'?'순위 점수 '+row[3]:'최고 기록 '+row[2];
+   metric=rankPeriod==='week'?row[2]:row[3];
+  }
+  tile.append(el('span','rankTileDetail',detail),el('strong','rankTileMetric',metric));tiles.append(tile);
+ }
+ if(rows.length)c.append(tiles);else c.append(el('p','hint','아직 해당 기간에 등록된 기록이 없습니다.'));
+ if(rows.length>limit){const extra=el('div','rankExtra'),scroll=el('div','rankExtraScroll');extra.setAttribute('role','region');extra.setAttribute('aria-label','추가 순위 목록');scroll.append(renderTable(columns,rows.slice(limit)));extra.append(scroll);c.append(extra);}
+ if(rankMode!=='school'&&currentUserUid){
+  const p=rankMode==='overall'?d.individuals.find(x=>x.uid===currentUserUid):d.bestByEvent[rankMode].find(x=>x.uid===currentUserUid),box=el('div','myRank');
+  box.append(el('strong','','🙋 내 순위: '+(p?p.rank+'위':'기록 없음')));
+  if(p){const value=rankMode==='overall'?p.total.toFixed(1)+'점':rankPeriod==='week'?fmt(p.sec)+'초':p.score.toFixed(1)+'점 누적 · 최고 '+fmt(p.sec)+'초';box.append(el('span','',value));}
+  c.append(box);
+ }
+}
+function fmtPoint(n){return n?Number(n).toFixed(1):'미참가';}
+function renderChoice(){holdIdentity();const u=currentUser();let ranking=rankData().individuals.find(x=>x.uid===u?.uid);const box=$('choiceSummary');box.replaceChildren();for(const e of OFFICIAL){const t=el('div','scoreTile');t.append(el('strong','',ranking&&ranking.scores[e]?ranking.scores[e].toFixed(1)+'점':'—'),el('span','',e));box.append(t);}}
+function stackCupIcon(){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 16');svg.setAttribute('class','stackCupIcon');svg.setAttribute('aria-hidden','true');const cups=[['M8 1h8l-1.2 5H9.2L8 1Z','#ffc857'],['M2 9h8l-1.2 5H3.2L2 9Z','#ff7658'],['M14 9h8l-1.2 5h-5.6L14 9Z','#57d1c0']];for(const [d,fill] of cups){const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',d);path.setAttribute('fill',fill);path.setAttribute('stroke','#14202b');path.setAttribute('stroke-width','.5');path.setAttribute('stroke-linejoin','round');svg.append(path);}return svg;}
+function listEvents(target){target.replaceChildren();const groups=[{name:'공식 리그',className:'officialGroup',events:OFFICIAL},{name:'연습용',className:'practiceGroup',events:EVENTS.filter(e=>!OFFICIAL.includes(e))}];for(const group of groups){const section=el('section','eventGroup '+group.className);const heading=el('h4','eventGroupTitle',(group.className==='officialGroup'?'🏆 ':'🎯 ')+group.name);const grid=el('div','eventGrid');for(const e of group.events){const b=el('button','eventBtn'+(e===selectedEvent?' active':''));b.type='button';const label=el('b','');label.append(stackCupIcon(),el('span','eventName',e));b.append(label);b.setAttribute('aria-label',group.name+' '+e);b.addEventListener('click',()=>{if(currentPage==='ai'&&state==='running'){toast('측정 중에는 종목을 변경할 수 없습니다.');return;}selectedHistoryRecordId='';selectedEvent=e;closeAiHistory();pendingMeasurement=null;$('cameraPending').classList.add('hidden');updateCameraState('search',e+' 준비 중 · 양손을 시작 위치로!',false);listEvents($('aiEvents'));listEvents($('teacherEvents'));if(currentPage==='teacher'){renderTeacherCandidates();openTeacherHistory();}});grid.append(b);}section.append(heading,grid);target.append(section);}}
+function choose(n){if(!currentUser()){showPage('home');return;}lastMode=n;if(n==='ai'){teacherVerified=false;teacherSchool='';saveMode='confirm';renderMode();selectedEvent='3-3-3';listEvents($('aiEvents'));closeAiHistory();setText('cameraTime','0.000');cameraStatus('카메라를 켜고 측정을 준비해 주세요.');showPage('ai');}
+ else if(n==='teacher'){teacherSchool=currentUser().school;teacherVerified=false;$('teacherGate').classList.remove('hidden');$('teacherEntry').classList.add('hidden');$('teacherCode').value='';selectedEvent='3-3-3';listEvents($('teacherEvents'));showPage('teacher');}}
+function renderMode(){document.querySelectorAll('[data-save-mode]').forEach(e=>e.classList.toggle('active',e.dataset.saveMode===saveMode));}
+function cameraStatus(s,mode){setText('cameraStatus',s);$('cameraStatus').className='status'+(mode==='good'?' good':mode==='live'?' live':'');}
+function updateCameraState(next,msg,beepReady){state=next;readyAt=leaveAt=returnAt=0;if(msg)cameraStatus(msg,next==='armed'?'good':next==='running'?'live':'');if(next==='armed'&&beepReady)playSignal('ready');}
+function palm(lms){let x=0,y=0;for(const i of [0,5,9,13,17]){x+=lms[i].x;y+=lms[i].y;}return {x:x/5,y:y/5};}
+function inLeft(p){return p.x>.10&&p.x<.45&&p.y>.68&&p.y<.96;}function inRight(p){return p.x>.55&&p.x<.90&&p.y>.68&&p.y<.96;}
+function drawCamera(lms,inside){const c=$('camCanvas'),v=$('camVideo'),w=v.videoWidth||960,h=v.videoHeight||600;if(c.width!==w||c.height!==h){c.width=w;c.height=h;}const x=c.getContext('2d');x.clearRect(0,0,w,h);for(const box of [[.10,.68,.35,.28],[.55,.68,.35,.28]]){x.fillStyle=inside?'rgba(60,241,170,.27)':'rgba(255,204,66,.14)';x.strokeStyle=inside?'#50ffaf':'#ffca43';x.lineWidth=4;x.fillRect(box[0]*w,box[1]*h,box[2]*w,box[3]*h);x.strokeRect(box[0]*w,box[1]*h,box[2]*w,box[3]*h);}for(const hand of lms){let p=palm(hand);x.beginPath();x.fillStyle='#ffec5a';x.arc(p.x*w,p.y*h,10,0,Math.PI*2);x.fill();}}
+function onHands(result){if(!cameraActive||testTimer)return;const now=performance.now(),lms=result.multiHandLandmarks||[],pts=lms.map(palm);const inZone=lms.length>=2&&pts.some(inLeft)&&pts.some(inRight);drawCamera(lms,inZone);setText('cameraLabel',lms.length+'개 손 인식 · '+(inZone?'시작 위치 확인':'영역 밖'));
+ if(state==='search'){if(inZone){if(!readyAt)readyAt=now;if(now-readyAt>=700)updateCameraState('armed','✅ 손 위치 확인! 삐-! 이제 양손을 떼세요.',true);}else readyAt=0;}
+ else if(state==='armed'){if(!inZone&&lms.length>=1){if(!leaveAt)leaveAt=now;if(now-leaveAt>=100)beginTiming('AI');}else leaveAt=0;}
+ else if(state==='running'){if(inZone){if(!returnAt)returnAt=now;if(now-returnAt>=450&&now-clockStart>=1100)finishTiming('AI');}else returnAt=0;}}
+function audio(){try{if(!soundContext)soundContext=new (window.AudioContext||window.webkitAudioContext)();if(soundContext.state==='suspended')soundContext.resume();}catch(e){toast('기기에서 신호음을 사용할 수 없습니다.');}return soundContext;}
+function tone(freq,start,len,volume,type='sine'){const ctx=audio();if(!ctx)return;let osc=ctx.createOscillator(),g=ctx.createGain();osc.type=type;osc.frequency.setValueAtTime(freq,start);const max=Math.min(.75,Number($('soundVolume').value)/100*.7);g.gain.setValueAtTime(.001,start);g.gain.exponentialRampToValueAtTime(Math.max(.002,volume*max),start+.022);g.gain.setValueAtTime(Math.max(.002,volume*max),start+Math.max(.022,len-.065));g.gain.exponentialRampToValueAtTime(.001,start+len);osc.connect(g).connect(ctx.destination);osc.start(start);osc.stop(start+len+.015);}
+function playSignal(which){const ctx=audio();if(!ctx)return;let at=ctx.currentTime+.035;if(which==='ready'){tone(880,at,.27,.85,'square');tone(1175,at+.30,.34,.85,'square');}else if(which==='end'){tone(740,at,.22,.85,'square');tone(988,at+.27,.25,.85,'square');tone(1320,at+.56,.43,1,'square');}else{tone(520,at,.12,.45,'sine');}}
+async function loadHands(){if(typeof window.Hands==='function')return;if(handScriptPromise)return handScriptPromise;handScriptPromise=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js';s.onload=()=>typeof window.Hands==='function'?resolve():reject(new Error('손 인식 라이브러리 로딩 실패'));s.onerror=()=>reject(new Error('MediaPipe 라이브러리 다운로드 실패 · 인터넷 연결 확인'));document.head.append(s);});try{await handScriptPromise;}catch(e){handScriptPromise=null;throw e;}}
+async function requestVideo(facing){const base={width:{ideal:960},height:{ideal:600}};try{return await navigator.mediaDevices.getUserMedia({video:{...base,facingMode:{ideal:facing}},audio:false});}catch(e){return navigator.mediaDevices.getUserMedia({video:base,audio:false});}}
+async function cameraStart(){if(cameraBusy)return;if(!navigator.mediaDevices?.getUserMedia){toast('카메라는 HTTPS/localhost 환경에서 켤 수 있습니다.');return;}cameraBusy=true;$('cameraToggle').disabled=true;cameraStatus('📷 카메라 연결 중...');try{audio();await loadHands();stream=await requestVideo(cameraFacing);$('camVideo').srcObject=stream;await $('camVideo').play();hands=new window.Hands({locateFile:f=>'https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/'+f});hands.setOptions({maxNumHands:2,modelComplexity:1,minDetectionConfidence:.6,minTrackingConfidence:.55});hands.onResults(onHands);cameraActive=true;testTimer=false;$('cameraEmpty').classList.add('hidden');$('cameraToggle').textContent='📷 카메라 끄기';$('cameraFlip').disabled=false;const mirror=cameraFacing==='user'?'scaleX(-1)':'none';$('camVideo').style.transform=mirror;$('camCanvas').style.transform=mirror;updateCameraState('search','🖐️ 하단 양쪽 영역에 손을 놓아 주세요.',false);setText('cameraLabel','손 위치 탐색 중');cameraLoopId=requestAnimationFrame(cameraLoop);}catch(e){stopCamera();cameraStatus('⚠️ 카메라 사용 실패: '+(e.message||e));}finally{cameraBusy=false;$('cameraToggle').disabled=false;}}
+async function cameraLoop(){if(!cameraActive)return;if(state==='running')setText('cameraTime',fmt((performance.now()-clockStart)/1000));if(!processing&&$('camVideo').readyState>=2&&hands){processing=true;try{await hands.send({image:$('camVideo')});}catch(e){cameraStatus('손 인식 중 오류 · 다시 켜 주세요.');}finally{processing=false;}}if(cameraActive)cameraLoopId=requestAnimationFrame(cameraLoop);}
+function stopCamera(){cameraActive=false;cancelAnimationFrame(cameraLoopId);cameraLoopId=0;if(stream){for(const t of stream.getTracks())t.stop();stream=null;}$('camVideo').srcObject=null;if(hands){try{const r=hands.close();if(r?.catch)r.catch(()=>{});}catch(e){}hands=null;}$('cameraEmpty').classList.remove('hidden');setText('cameraLabel','카메라 꺼짐');setText('cameraToggle','📷 카메라 켜기');$('cameraFlip').disabled=true;if(state==='running'){testTimer=false;cameraStatus('카메라 종료로 측정을 취소했습니다.');}state='idle';}
+function cameraReset(){pendingMeasurement=null;autoSaveToken++;$('cameraPending').classList.add('hidden');if(state==='running')testTimer=false;clockStart=0;setText('cameraTime','0.000');updateCameraState(cameraActive?'search':'idle',cameraActive?'🖐️ 양손을 시작 영역에 놓아 주세요.':'카메라를 켜고 측정해 주세요.',false);}
+function beginTiming(source){if(state==='running')return;state='running';measureSource=source;clockStart=performance.now();returnAt=0;cameraStatus('⚡ 측정 중! 스태킹을 마친 뒤 손을 시작 영역에 놓으세요.','live');}
+function finishTiming(source){if(state!=='running')return;let t=(performance.now()-clockStart)/1000;state='done';testTimer=false;playSignal('end');setText('cameraTime',fmt(t));cameraStatus('🏁 측정 종료! 신호음이 울렸어요.','good');if(t<1||t>300){cameraStatus('⚠️ 측정 허용 범위(1~300초)를 벗어났어요. 다시 측정해 주세요.');return;}pendingMeasurement={event:selectedEvent,sec:Number(fmt(t)),source:source==='AI'?'AI 손 인식':'테스트 타이머',confirmSave:saveMode==='confirm'};if(saveMode==='auto'){saveMeasurement(pendingMeasurement);}
+ else{setText('pendingTime',fmt(t)+'초');setText('pendingEvent',selectedEvent);$('cameraPending').classList.remove('hidden');}}
+async function saveMeasurement(m){if(!m||!currentUser())return;if(REMOTE)return saveRemote(m);const newRecord={id:uid(),uid:currentUserUid,event:m.event,sec:m.sec,at:new Date().toISOString(),source:m.source,valid:m.confirmSave?false:true};records.push(newRecord);persist();lastRecord=newRecord;lastResultEvent=m.event;pendingMeasurement=null;$('cameraPending').classList.add('hidden');if(m.confirmSave){showSavedAiHistory();toast('✅ 기록을 저장했습니다. 목록에서 선택해 공식 기록으로 등록할 수 있습니다.');return;}renderResult();showPage('result');toast('✅ 시안 기록을 브라우저에 저장했습니다.');}
+async function saveRemote(m){
+ if(remoteBusy)return;remoteBusy=true;
+ try{const result=await remoteWrite('record',{token:studentToken,teacherToken:m.source.includes('교사')?teacherToken:'',event:m.event,sec:m.sec,source:m.source,...(m.confirmSave?{confirmSave:true}:{})});if(m.confirmSave){if(!result.record)throw Error('저장 응답에서 기록을 확인하지 못했습니다.');records=records.filter(r=>r.id!==result.record.id);records.push(result.record);pendingMeasurement=null;$('cameraPending').classList.add('hidden');showSavedAiHistory();toast('✅ 기록을 저장했습니다. 목록에서 선택해 공식 기록으로 등록할 수 있습니다.');try{await remoteRefresh();}catch(syncError){}return;}await remoteRefresh();lastRecord=result.record;lastResultEvent=m.event;pendingMeasurement=null;$('cameraPending').classList.add('hidden');renderResult();showPage('result');toast('✅ 기록을 구글 시트에 저장했습니다.');}
+ catch(err){toast('⚠️ '+err.message);}finally{remoteBusy=false;}
+}
+function recordForUser(uid,event){return allRecords().filter(r=>r.uid===uid&&r.event===event).sort((a,b)=>new Date(b.at)-new Date(a.at));}
+function historyChoice(record,kind,index){
+ const row=el('label','historyRow historyRowSelect'),radio=el('input');
+ radio.type='radio';radio.name=kind+'HistoryRecord';radio.value=record.id;
+ radio.checked=selectedHistoryRecordId===record.id;radio.disabled=historyDeleteBusy;
+ radio.setAttribute('aria-label',fmt(record.sec)+'초 기록 선택');
+ radio.addEventListener('change',()=>{selectedHistoryRecordId=record.id;$((kind==='ai'?'ai':'teacher')+'HistoryDelete').disabled=false;if(kind==='ai')updateAiRegisterButton(recordForUser(currentUserUid,selectedEvent));});
+ const date=new Date(record.at).toLocaleString('ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
+ row.append(radio,el('span','',date+' · '+(index===0?'가장 최근':(index+1)+'번째')+(kind==='ai'?' · '+(record.valid===false?(OFFICIAL.includes(record.event)&&!String(record.source).includes('테스트')?'공식 등록 전':'연습 기록'):'공식 기록'):'')),el('b','',fmt(record.sec)+'초'));
+ return row;
+}
+function updateHistoryDeleteButton(kind,list){
+ $(kind+'HistoryDelete').disabled=historyDeleteBusy||!list.some(r=>r.id===selectedHistoryRecordId);
+}
+function canRegisterAiRecord(record){return !!record&&record.uid===currentUserUid&&record.event===selectedEvent&&OFFICIAL.includes(record.event)&&record.valid===false&&!String(record.source).includes('테스트')&&String(record.source).includes('AI');}
+function updateAiRegisterButton(list){$('aiHistoryRegister').disabled=aiRegisterBusy||historyDeleteBusy||!list.some(r=>r.id===selectedHistoryRecordId&&canRegisterAiRecord(r));}
+async function registerAiHistoryRecord(){
+ if(aiRegisterBusy||historyDeleteBusy)return;
+ const record=recordForUser(currentUserUid,selectedEvent).find(r=>r.id===selectedHistoryRecordId);
+ if(!canRegisterAiRecord(record)){toast('공식 등록 전 AI 기록 중 리그 종목을 선택해 주세요.');return;}
+ aiRegisterBusy=true;updateAiRegisterButton([record]);
+ try{
+  if(REMOTE){const result=await remoteWrite('registerRecord',{token:studentToken,recordId:record.id});if(result.registeredId!==record.id)throw Error('등록 결과를 확인하지 못했습니다.');}
+  record.valid=true;persist();selectedHistoryRecordId='';showRank();renderAiHistory();
+  toast('✅ 선택한 기록을 공식 기록으로 등록했습니다.');
+  if(REMOTE)try{await remoteRefresh();renderAiHistory();}catch(syncError){}
+ }catch(error){toast('⚠️ 공식 기록 등록 실패: '+String(error.message||error));}
+ finally{aiRegisterBusy=false;renderAiHistory();}
+}
+async function deleteHistoryRecord(kind){
+ if(historyDeleteBusy)return;
+ if(kind==='teacher'&&!teacherVerified){toast('교사 인증을 다시 확인해 주세요.');return;}
+ const record=recordForUser(currentUserUid,selectedEvent).find(r=>r.id===selectedHistoryRecordId);
+ if(!record){toast('삭제할 기록을 선택해 주세요.');return;}
+ if(!window.confirm(selectedEvent+' '+fmt(record.sec)+'초 기록을 삭제할까요? 삭제하면 순위에서도 제외됩니다.'))return;
+ historyDeleteBusy=true;updateHistoryDeleteButton(kind,[record]);
+ try{
+  if(REMOTE){
+   const result=await remoteWrite(adminMode&&kind==='teacher'?'teacherDeleteRecord':'deleteRecord',{uid:currentUserUid,token:studentToken,teacherToken:kind==='teacher'?teacherToken:'',recordId:record.id});
+   if(result.deletedId!==record.id)throw Error('삭제 결과를 확인하지 못했습니다.');
+  }
+  records=records.filter(r=>r.id!==record.id);persist();
+  if(lastRecord?.id===record.id)lastRecord=null;
+  teacherCandidates=teacherCandidates.filter(item=>item.recordId!==record.id);saveTeacherTrials();
+  selectedHistoryRecordId='';showRank();
+  if(REMOTE)try{await remoteRefresh();}catch(syncError){toast('기록은 삭제됐습니다. 순위 새로고침이 지연됩니다.');}
+  if(kind==='ai')renderAiHistory();else{renderTeacherHistory();renderTeacherCandidates();}
+  toast('✅ 선택한 기록을 삭제했습니다.');
+ }catch(error){toast('⚠️ 삭제 실패: '+String(error.message||error));}
+ finally{historyDeleteBusy=false;if(kind==='ai')renderAiHistory();else renderTeacherHistory();}
+}
+function closeAiHistory(){
+  const panel=$('aiHistoryPanel'),button=$('aiHistoryToggle');
+  selectedHistoryRecordId='';$('aiHistoryDelete').disabled=true;$('aiHistoryRegister').disabled=true;
+  panel.classList.add('hidden');button.setAttribute('aria-expanded','false');
+  setText('aiHistoryArrow','▾');
+}
+function renderAiHistory(){
+  const list=recordForUser(currentUserUid,selectedEvent);
+  setText('aiHistoryTitle','📈 '+selectedEvent+' 이전 기록 그래프');
+  plotHistory(list,'aiHistoryGraph');
+  const elList=$('aiHistoryList');elList.replaceChildren();
+  updateHistoryDeleteButton('ai',list);
+  updateAiRegisterButton(list);
+  if(!list.length){elList.append(el('p','hint','🐣 아직 저장한 기록이 없어요. 첫 측정을 시작해 보세요!'));return;}
+  list.forEach((r,i)=>{
+    elList.append(historyChoice(r,'ai',i));
+  });
+  elList.scrollTop=0;
+}
+function showSavedAiHistory(){
+ selectedHistoryRecordId='';
+ const panel=$('aiHistoryPanel'),button=$('aiHistoryToggle');
+ panel.classList.remove('hidden');button.setAttribute('aria-expanded','true');setText('aiHistoryArrow','▴');
+ renderAiHistory();panel.scrollIntoView({block:'nearest',behavior:'smooth'});
+}
+function toggleAiHistory(){
+  const panel=$('aiHistoryPanel'),button=$('aiHistoryToggle');
+  const nextOpen=panel.classList.contains('hidden');
+  if(nextOpen)renderAiHistory();
+  panel.classList.toggle('hidden',!nextOpen);
+  button.setAttribute('aria-expanded',String(nextOpen));
+  setText('aiHistoryArrow',nextOpen?'▴':'▾');
+}
+function plotHistory(points,targetId='resultGraph',all=false){const node=$(targetId);node.replaceChildren();if(!points.length){node.textContent='기록이 아직 없습니다.';return;}const arr=(all?points.slice().reverse():points.slice().reverse().slice(-10)),width=460,height=205,pad={l:44,r:15,t:18,b:34};let vals=arr.map(p=>p.sec),min=Math.min(...vals),max=Math.max(...vals);let range=Math.max(.6,max-min);min-=range*.2;max+=range*.2;let sx=i=>pad.l+(width-pad.l-pad.r)*(arr.length===1?.5:i/(arr.length-1)),sy=v=>pad.t+(height-pad.t-pad.b)*(max-v)/(max-min);let ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.setAttribute('class','graphSvg');svg.setAttribute('role','img');svg.setAttribute('aria-label','최근 기록의 시간 변화 그래프');function nodeSvg(tag,attrs,text){let n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;svg.append(n);return n;}
+ for(let i=0;i<=3;i++){const y=pad.t+(height-pad.t-pad.b)*i/3;nodeSvg('line',{x1:pad.l,y1:y,x2:width-pad.r,y2:y,stroke:'#f2dbc5','stroke-dasharray':'4 4'});nodeSvg('text',{x:pad.l-8,y:y+4,'text-anchor':'end',fill:'#94745e','font-size':'11'},(max-(max-min)*i/3).toFixed(1));}
+ let d=arr.map((r,i)=>(i?'L':'M')+sx(i).toFixed(1)+','+sy(r.sec).toFixed(1)).join(' ');nodeSvg('path',{d,fill:'none',stroke:'#ff6d2c','stroke-width':'4','stroke-linecap':'round','stroke-linejoin':'round'});arr.forEach((r,i)=>{nodeSvg('circle',{cx:sx(i),cy:sy(r.sec),r:5.5,fill:'#ffba35',stroke:'#f26522','stroke-width':2});nodeSvg('text',{x:sx(i),y:height-11,'text-anchor':'middle',fill:'#9e7b60','font-size':'10'},String(i+1));});node.append(svg);}
+function renderResult(){const u=currentUser(),rec=lastRecord||{event:lastResultEvent,sec:0,source:''},list=recordForUser(currentUserUid,rec.event),best=list.slice().sort((a,b)=>a.sec-b.sec||new Date(a.at)-new Date(b.at)).slice(0,5);const rank=rankData().bestByEvent[rec.event]?.find(x=>x.uid===currentUserUid);setText('resultEvent',rec.event+' · '+(OFFICIAL.includes(rec.event)?'리그 종목':'연습 종목'));setText('resultSource',rec.source+(REMOTE?' · 구글 시트 저장':' · 시안'));$('resultTime').innerHTML='';$('resultTime').append(document.createTextNode(fmt(rec.sec)),el('small','','초'));setText('resultBest',best.length?fmt(best[0].sec)+'초':'—');setText('resultCount',list.length+'회');setText('resultRank',rank?rank.rank+'위':'연습 종목');let newBest=best.length&&rec.id===best[0].id;setText('resultCongrats',newBest?'🏆 최고기록 갱신! 나 자신을 이겼어요!':'🌟 끝까지 도전한 모습이 멋져요!');
+ const top=$('resultTop5');top.replaceChildren();best.forEach((r,i)=>{let row=el('div','topRow');row.append(el('span','',['🥇','🥈','🥉','4️⃣','5️⃣'][i]+' '+(i+1)+'위'),el('b','',fmt(r.sec)+'초'));top.append(row);});if(!best.length)top.append(el('p','hint','아직 기록이 없습니다.'));
+ const hist=$('resultHistory');hist.replaceChildren();list.forEach((r,i)=>{const row=el('div','historyRow');row.append(el('span','',(i===0?'최근 기록':(i+1)+'번째 이전 기록')+' · '+new Date(r.at).toLocaleDateString('ko-KR')),el('b','',fmt(r.sec)+'초'));hist.append(row);});plotHistory(list);
+ $('resultNextStudent').classList.toggle('hidden',lastMode!=='teacher'||!teacherVerified);
+}
+function teacherTrialsKey(){return 'teacher-trials-v1-'+currentUserUid;}
+function saveTeacherTrials(){if(!currentUserUid)return;try{sessionStorage.setItem(teacherTrialsKey(),JSON.stringify(teacherCandidates));}catch(error){}}
+function loadTeacherCandidates(){teacherCandidates=[];if(!currentUserUid)return;try{const saved=JSON.parse(sessionStorage.getItem(teacherTrialsKey())||'[]');if(Array.isArray(saved))teacherCandidates=saved.filter(x=>x&&EVENTS.includes(x.event)&&Number.isFinite(Number(x.sec))&&x.id);}catch(error){}}
+function setTeacherMeasureMode(mode){teacherMeasureMode=mode==='tablet'?'tablet':'phone';document.querySelectorAll('[data-teacher-method]').forEach(button=>button.classList.toggle('active',button.dataset.teacherMethod===teacherMeasureMode));$('teacherPhonePanel').classList.toggle('hidden',teacherMeasureMode!=='phone');$('teacherTabletPanel').classList.toggle('hidden',teacherMeasureMode!=='tablet');}
+function updateTeacherSaveButton(){const selected=teacherCandidates.find(x=>x.id===teacherSelectedCandidateId&&x.event===selectedEvent&&!x.saved);$('teacherSave').disabled=!selected||teacherSaveBusy;$('teacherSave').textContent=teacherSaveBusy?'기록을 안전하게 저장 중…':'✅ 공식 기록으로 등록';}
+function renderTeacherCandidates(){const list=$('teacherCandidateList');if(!list)return;list.replaceChildren();const items=teacherCandidates.filter(x=>x.event===selectedEvent);if(!items.length)list.append(el('p','hint','아직 측정 기록이 없습니다. 타이머를 정지하거나 패드 측정값을 목록에 추가해 주세요.'));for(const item of items){const row=el('label','teacherTrialRow'+(item.id===teacherSelectedCandidateId?' selected':''));row.dataset.trialId=item.id;if(!item.saved){const radio=el('input');radio.type='radio';radio.name='teacherCandidate';radio.value=item.id;radio.checked=item.id===teacherSelectedCandidateId;radio.setAttribute('aria-label',fmt(item.sec)+'초 기록 선택');radio.addEventListener('change',()=>{teacherSelectedCandidateId=item.id;document.querySelectorAll('.teacherTrialRow').forEach(node=>node.classList.toggle('selected',node.dataset.trialId===item.id));updateTeacherSaveButton();});row.append(radio);}const details=el('div','teacherTrialDetails'),left=el('div',''),time=el('strong','',fmt(item.sec)+'초'),meta=el('div','teacherTrialMeta',(item.method==='phone'?'📱 휴대폰 타이머':'📟 패드 타이머')+' · '+new Date(item.at).toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}));left.append(time,meta);details.append(left);if(item.saved)details.append(el('span','teacherTrialSaved','✅ 기록 저장 완료'));row.append(details);list.append(row);}updateTeacherSaveButton();}
+function addTeacherCandidate(sec,method){const value=Math.round(Number(sec)*1000)/1000;if(!Number.isFinite(value)||value<1||value>300){toast('기록은 1.000~300.000초 범위로 측정해 주세요.');return false;}const item={id:uid(),requestId:'teacher-'+crypto.randomUUID(),event:selectedEvent,sec:value,method,at:new Date().toISOString(),saved:false};teacherCandidates.unshift(item);teacherSelectedCandidateId='';saveTeacherTrials();renderTeacherCandidates();toast(fmt(value)+'초 측정값을 목록에 추가했습니다. 저장할 기록을 선택하세요.');return true;}
+function updateTeacherTimer(){if(!teacherTimerActive)return;setText('teacherTimerValue',fmt((performance.now()-teacherTimerStartedAt)/1000));teacherTimerRaf=requestAnimationFrame(updateTeacherTimer);}
+function resetTeacherTimer(){teacherTimerNeedsReset=false;setText('teacherTimerValue','0.000');const button=$('teacherTimerStart');button.textContent='▶ 시작';button.disabled=!teacherVerified;}
+function startTeacherTimer(){if(!teacherVerified||teacherTimerActive)return;if(teacherTimerNeedsReset){resetTeacherTimer();return;}teacherTimerStartedAt=performance.now();teacherTimerActive=true;$('teacherTimerStart').disabled=true;$('teacherTimerStart').textContent='▶ 시작';$('teacherTimerStop').disabled=false;updateTeacherTimer();}
+function stopTeacherTimer(addToList=true){if(!teacherTimerActive)return;teacherTimerActive=false;cancelAnimationFrame(teacherTimerRaf);const sec=Math.round(((performance.now()-teacherTimerStartedAt)/1000)*1000)/1000;$('teacherTimerStop').disabled=true;setText('teacherTimerValue',fmt(sec));const added=addToList&&addTeacherCandidate(sec,'phone');if(added){teacherTimerNeedsReset=true;$('teacherTimerStart').disabled=false;$('teacherTimerStart').textContent='↻ 리셋';}else resetTeacherTimer();}
+function addTabletCandidate(){const str=$('teacherSeconds').value.trim();if(!/^\d+(?:\.\d{1,3})?$/.test(str)){toast('초 단위로 8.245처럼 입력해 주세요.');return;}const sec=Number(str);if(addTeacherCandidate(sec,'tablet'))$('teacherSeconds').value='';}
+function renderTeacherHistory(){const list=recordForUser(currentUserUid,selectedEvent);setText('teacherHistoryTitle','📈 '+selectedEvent+' 이전 기록');plotHistory(list,'teacherHistoryGraph',true);const container=$('teacherHistoryList');container.replaceChildren();updateHistoryDeleteButton('teacher',list);if(!list.length){container.append(el('p','hint','아직 저장된 기록이 없습니다.'));return;}list.forEach((record,index)=>container.append(historyChoice(record,'teacher',index)));}
+function openTeacherHistory(){renderTeacherHistory();const panel=$('teacherHistoryPanel'),button=$('teacherHistoryToggle');panel.classList.remove('hidden');button.setAttribute('aria-expanded','true');setText('teacherHistoryArrow','▴');button.firstChild.textContent='📈 '+selectedEvent+' 이전 기록 보기 ';}
+function toggleTeacherHistory(){const panel=$('teacherHistoryPanel'),button=$('teacherHistoryToggle'),open=panel.classList.contains('hidden');if(open)renderTeacherHistory();panel.classList.toggle('hidden',!open);button.setAttribute('aria-expanded',String(open));setText('teacherHistoryArrow',open?'▴':'▾');}
+function showTeacherSaving(state,title,message){const popup=$('teacherSavingPopup');popup.classList.remove('hidden');setText('teacherSavingTitle',title);setText('teacherSavingMessage',message);$('teacherSavingSpinner').classList.toggle('hidden',state!=='saving');$('teacherSavingClose').classList.toggle('hidden',state==='saving');}
+async function saveTeacher(){if(!teacherVerified||!currentUser()){toast('교사 인증과 학생 로그인을 확인해 주세요.');return;}if(teacherSaveBusy)return;const item=teacherCandidates.find(x=>x.id===teacherSelectedCandidateId&&x.event===selectedEvent&&!x.saved);if(!item){toast('등록할 측정 기록을 먼저 선택해 주세요.');return;}teacherSaveBusy=true;updateTeacherSaveButton();showTeacherSaving('saving','기록을 안전하게 저장 중','선택한 '+item.event+' '+fmt(item.sec)+'초 기록을 안전하게 저장하고 있습니다.');lastMode='teacher';const source='교사 '+(item.method==='phone'?'휴대폰 타이머':'패드 타이머');try{let record;if(REMOTE){const result=await remoteWrite(adminMode?'teacherRecord':'record',{requestId:item.requestId,uid:currentUserUid,token:studentToken,teacherToken,event:item.event,sec:item.sec,source});record=result.record;if(!record)throw Error('저장 응답에서 기록을 확인하지 못했습니다.');item.saved=true;item.recordId=record.id;records=records.filter(existing=>existing.id!==record.id);records.push(record);saveTeacherTrials();try{await remoteRefresh();}catch(syncError){}}else{record={id:uid(),uid:currentUserUid,event:item.event,sec:item.sec,at:new Date().toISOString(),source,valid:OFFICIAL.includes(item.event)};records.push(record);persist();item.saved=true;item.recordId=record.id;saveTeacherTrials();}lastRecord=record;lastResultEvent=item.event;teacherSelectedCandidateId='';renderTeacherCandidates();renderTeacherHistory();showTeacherSaving('done','기록 저장 완료',item.event+' '+fmt(item.sec)+'초 기록이 저장되었습니다.');toast('✅ '+item.event+' 기록 저장 완료.');}catch(error){showTeacherSaving('error','저장에 실패했습니다',String(error.message||error));toast('⚠️ 기록 저장에 실패했습니다. 기록 목록은 유지되며 다시 시도할 수 있습니다.');}finally{teacherSaveBusy=false;updateTeacherSaveButton();}}
+function closeTeacherSaving(){if(teacherSaveBusy)return;$('teacherSavingPopup').classList.add('hidden');}
+
+function closeTeacherHistory(){const panel=$('teacherHistoryPanel'),button=$('teacherHistoryToggle');if(!panel||!button)return;selectedHistoryRecordId='';$('teacherHistoryDelete').disabled=true;panel.classList.add('hidden');button.setAttribute('aria-expanded','false');setText('teacherHistoryArrow','▾');if(button.firstChild)button.firstChild.textContent='📈 선택 종목 이전 기록 보기 ';}
+function openTeacher(resetSession=true){if(!teacherVerified){choose('teacher');return;}if(resetSession){if(teacherTimerActive)stopTeacherTimer(false);selectedEvent='3-3-3';teacherSelectedCandidateId='';loadTeacherCandidates();resetTeacherTimer();setTeacherMeasureMode('phone');closeTeacherHistory();}listEvents($('teacherEvents'));renderTeacherCandidates();renderTeacherHistory();$('teacherGate').classList.add('hidden');$('teacherEntry').classList.remove('hidden');setText('teacherStudentLabel',currentUser()?.nick||'');$('adminMeasureNav').classList.toggle('hidden',!adminMode);$('page-teacher').querySelector('.nav:not(#adminMeasureNav)').classList.toggle('hidden',adminMode);$('teacherSettings').classList.toggle('hidden',adminMode);$('adminMeasureNotes').classList.toggle('hidden',!adminMode);showPage('teacher');}
+async function teacherUnlock(){const button=$('teacherUnlock'),status=$('teacherGateStatus');if(button.disabled)return;const showStatus=(message,error=false)=>{setText('teacherGateStatus',message);status.classList.remove('hidden');status.style.color=error?'#ff9b88':'#9ce3bd';};button.disabled=true;button.textContent='⏳ 서버에서 교사 인증을 확인하고 있습니다';showStatus('Apps Script에 인증을 요청했습니다. 잠시 기다려 주세요.');try{const user=currentUser();if(!user)throw Error('학생 계정으로 먼저 로그인한 뒤 교사 인증을 해 주세요.');const value=$('teacherCode').value.trim();if(!value)throw Error('교사 관리번호를 입력해 주세요.');if(!REMOTE&&value!=='2468')throw Error('체험 교사 관리번호가 일치하지 않습니다.');if(REMOTE){const r=await remoteWrite('teacherLogin',{school:user.school,code:value});teacherToken=r.teacherToken;}teacherVerified=true;teacherSchool=user.school;$('teacherCode').value='';openTeacher();toast('✅ 교사 인증이 완료되었습니다.');}catch(err){teacherVerified=false;teacherToken='';teacherSchool='';const message=String(err.message||err);showStatus('⚠️ '+message,true);toast('⚠️ '+message);}finally{button.disabled=false;button.textContent='🔓 기록 입력 시작';}}
+function populationPanel(){const p=$('teacherPopulation');p.classList.toggle('hidden');if(p.classList.contains('hidden'))return;const cont=$('populationFields');cont.replaceChildren();for(const school of SCHOOLS){let wrap=el('div','field'),l=el('label','',school),input=el('input');input.type='number';input.min='1';input.max='20000';input.value=schoolPop[school];input.dataset.pop=school;wrap.append(l,input);cont.append(wrap);}}
+async function savePopulation(){for(const inp of document.querySelectorAll('[data-pop]')){const p=Number(inp.value);if(!Number.isInteger(p)||p<1||p>20000){toast(inp.dataset.pop+' 학생 수는 1~20000 사이로 입력해 주세요.');return;}schoolPop[inp.dataset.pop]=p;}if(REMOTE){try{await remoteWrite('population',{teacherToken,counts:schoolPop});await remoteRefresh();}catch(err){toast('⚠️ '+err.message);return;}}persist();showRank();$('teacherPopulation').classList.add('hidden');toast('✅ 학교 학생 수가 반영됐습니다.');}
+function nextStudent(){if(adminMode){adminChooseTask('measure');return;}if(!teacherVerified){toast('교사 세션이 종료됐습니다.');return;}currentUserUid='';$('nextStudentNick').value='';$('nextStudentPin').value='';showPage('nextstudent');}
+async function nextStudentLogin(evt){evt.preventDefault();const nick=$('nextStudentNick').value.trim(),pin=$('nextStudentPin').value;if(REMOTE){toast('다른 학생은 로그아웃 후 본인 계정으로 로그인해 주세요.');return;}try{let user=users.find(u=>u.school===teacherSchool&&accountKey(u.school,u.nick)===accountKey(teacherSchool,nick));if(!user||!(await checkPin(user,pin))){toast('닉네임과 비밀번호를 확인해 주세요.');return;}currentUserUid=user.uid;session={uid:user.uid};holdIdentity();lastMode='teacher';openTeacher();toast('✅ '+user.nick+' 학생의 계정이 확인되었습니다.');}catch(e){toast(e.message);}}
+function showCoach(){if(!currentUser()){showPage('home');return;}coachReturn=currentPage==='result'?'result':currentPage==='teacher'?'teacher':'choice';holdIdentity();const sel=$('coachEvent');if(!sel.options.length)selectOptions(sel,EVENTS);sel.value=lastResultEvent||selectedEvent;coachSelections=[];renderCoachOptions();renderCoachPreview();showPage('coach');}
+function renderCoachOptions(){const c=$('coachOptions');c.replaceChildren();DIFFICULTIES.forEach(([k,label])=>{let b=el('button','coachOpt'+(coachSelections.includes(k)?' active':''));b.type='button';b.textContent=(coachSelections.includes(k)?'☑ ':'☐ ')+label;b.addEventListener('click',()=>{if(coachSelections.includes(k))coachSelections=coachSelections.filter(x=>x!==k);else if(coachSelections.length<2)coachSelections.push(k);else{toast('어려움은 최대 2개까지 선택할 수 있어요.');return;}renderCoachOptions();});c.append(b);});$('coachOtherArea').classList.toggle('hidden',!coachSelections.includes('other'));}
+function renderCoachPreview(){ $('coachRecords').classList.add('hidden');let e=$('coachEvent').value,rec=recordForUser(currentUserUid,e),best=rec.slice().sort((a,b)=>a.sec-b.sec).slice(0,5);const c=$('coachPreview');c.replaceChildren();let title=el('strong','',e+' · 나의 기록 요약');c.append(title);if(!rec.length)c.append(el('p','', '아직 기록이 없습니다. 첫 측정을 완료한 후 도전해 보세요! 🐣'));else{const lines=['총 측정 '+rec.length+'회','현재 저장 최고기록 '+fmt(best[0].sec)+'초','최고기록 TOP 5: '+best.map(x=>fmt(x.sec)).join(' / ')+'초','최근 5회: '+rec.slice(0,5).reverse().map(x=>fmt(x.sec)).join(' → ')+'초'];lines.forEach(t=>c.append(el('div','',t)));}}
+function renderCoachRecords(){const e=$('coachEvent').value,list=recordForUser(currentUserUid,e),best=list.slice().sort((a,b)=>a.sec-b.sec).slice(0,5);const box=$('coachBest5');box.replaceChildren();if(!best.length)box.append(el('p','hint','아직 기록이 없습니다.'));for(const [i,r] of best.entries()){const row=el('div','topRow');row.append(el('span','',(i+1)+'위 · '+new Date(r.at).toLocaleDateString('ko-KR')),el('b','',fmt(r.sec)+'초'));box.append(row);}plotHistory(list,'coachGraph',true);$('coachRecords').classList.remove('hidden');}
+function coachText(){const ev=$('coachEvent').value,recs=recordForUser(currentUserUid,ev),best=recs.slice().sort((a,b)=>a.sec-b.sec).slice(0,5),sel=coachSelections.map(k=>k==='other'?$('coachOther').value.trim():DIFFICULTIES.find(x=>x[0]===k)?.[1]).filter(Boolean);if(coachSelections.includes('other')&&!$('coachOther').value.trim()){toast('기타 어려움을 한두 문장으로 입력해 주세요.');return '';}
+ const lines=['너는 중학생 스포츠스태킹 AI 연습 코치야. 다음 학생의 개인 기록을 분석해 줘.','개인정보는 포함하지 않았어.','종목: '+ev,'최근 측정 횟수: '+recs.length+'회','최고기록 TOP 5: '+(best.length?best.map(r=>fmt(r.sec)+'초').join(', '):'없음'),'최근 기록(오래된 순): '+(recs.length?recs.slice(0,10).reverse().map(r=>fmt(r.sec)+'초').join(', '):'없음'),'학생이 직접 선택한 어려움: '+(sel.length?sel.join(' / '):'아직 선택하지 않음'),'', '반드시 다음을 지켜 줘.','1. 기록을 바탕으로 긍정적이고 구체적인 성장을 칭찬하고, 확실한 사실과 추정을 구분해.','2. 학생의 선택과 종목에 맞는 연습 방법 2가지를 정확한 동작·순서·횟수·목적과 함께 제시해.','3. 학생의 실천 가능한 다음 목표를 1개 제시해.','4. 귀여운 이모지, 간단한 표·그래프를 활용해 휴대폰에서 한눈에 알아보도록 해.','5. 컵 떨어짐·손동작 오류·규칙 위반은 기록만으로 확인했다고 단정하지 마.','6. 학생이 어디가 문제인지 모르겠다고 했으면 반드시 체육선생님께 실제 동작을 보여주고 질문하라고 안내하며, 선생님께 여쭤볼 질문을 직접 만들어 줘.','7. 다른 어려움에서도 체육선생님께 점검할 구체적인 질문을 제시해.','8. 언제나 맨 마지막 문장은 다음 문장을 그대로 사용해: '+COACH_FOOTER];return lines.join('\n');}
+function copyTextNow(message){
+  const ta=document.createElement('textarea');ta.value=message;
+  ta.setAttribute('readonly','');
+  ta.style.cssText='position:fixed;top:0;left:0;width:1px;height:1px;padding:0;border:0;opacity:0.01;font-size:16px;';
+  document.body.append(ta);ta.focus();ta.select();
+  let copied=false;try{copied=document.execCommand('copy');}catch(error){}
+  ta.remove();return copied;
+}
+async function copyCoach(openChat){
+  const message=coachText();if(!message)return;
+  // 앱 탭이 포커스를 가진 동안 복사를 먼저 시도합니다.
+  let clipboardPromise=null;
+  try{
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      clipboardPromise=navigator.clipboard.writeText(message);
+    }
+  }catch(error){}
+  const fallbackCopied=copyTextNow(message);
+  // 탭을 열기 전에 동기 복사를 마쳐 브라우저가 클립보드 권한을 유지하도록 합니다.
+  const chatTab=openChat?window.open(CHATGPT_URL,'_blank'):null;
+  let copied=fallbackCopied;
+  if(clipboardPromise){
+    try{await clipboardPromise;copied=true;}catch(error){}
+  }
+  if(!copied){
+    if(chatTab&&!chatTab.closed)chatTab.close();
+    toast('⚠️ 자동 복사가 차단되었습니다. 브라우저의 클립보드 권한을 허용한 뒤 다시 눌러 주세요.');
+    return;
+  }
+  if(openChat){
+    toast(chatTab
+      ?'✅ 기록과 코칭 요청을 복사했어요. 열린 ChatGPT에 붙여넣고 전송해 주세요.'
+      :'✅ 복사 완료! 새 탭이 차단됐어요. chatgpt.com을 열어 붙여넣어 주세요.');
+  }else{
+    toast('✅ 기록과 코칭 요청을 복사했어요. ChatGPT 채팅창에 붙여넣어 주세요.');
+  }
+}
+function logout(){stopCamera();studentToken='';teacherToken='';currentUserUid='';session=null;teacherVerified=false;teacherSchool='';lastRecord=null;lastResultEvent='';selectedEvent='3-3-3';$('authPin').value='';$('authNick').value='';showRank();showPage('home');$('loginAnchor').scrollIntoView({behavior:'smooth',block:'start'});toast('👋 로그아웃했습니다. 다음 학생이 로그인할 수 있어요.');}
+function action(a){switch(a){case 'home':showRank();showPage('home');break;case 'logout':logout();break;case 'choice':renderChoice();showPage('choice');break;case 'ai':choose('ai');break;case 'teacher':teacherVerified?openTeacher():choose('teacher');break;case 'coach':showCoach();break;case 'coach-back':if(coachReturn==='result'&&lastRecord){renderResult();showPage('result');}else if(coachReturn==='teacher'&&teacherVerified)openTeacher(false);else{renderChoice();showPage('choice');}break;case 'next-event':if(lastMode==='teacher'&&teacherVerified)openTeacher();else choose('ai');break;case 'next-student':nextStudent();break;}}
+function setup(){load();
+ if(REMOTE){
+  setText('backendStatus','⏳ Google Sheets에서 기록을 불러오고 있습니다.');
+  setText('rankDataStatus','연동 중');
+  setText('footerStatus','🥤 2026년 2학기 스포츠 스태킹 온라인 리그전 · 신월중 · 경원중 · 감계중 · 반림중 · 진영중 · 자유학교');
+  remoteRefresh().then(()=>setText('backendStatus','✅ Google Sheets 연결 · 학교 공동 기록 사용')).catch(e=>{setText('backendStatus','⚠️ 구글 시트 서버에 연결할 수 없습니다: '+e.message);setText('rankDataStatus','연결 확인 필요');});
+  // 여러 기기의 기록이 순위에 반영되도록 90초마다 자동 동기화합니다.
+  setInterval(()=>{if(!document.hidden&&!remoteBusy)remoteRefresh().catch(e=>setText('backendStatus','⚠️ 데이터 동기화 실패: '+e.message));},90000);
+ }else{
+  setText('backendStatus','🧪 테스트 모드 · GAS 웹앱 배포 URL을 연결하기 전에는 브라우저에서만 기록이 저장됩니다.');
+ }selectOptions($('authSchool'),SCHOOLS,'학교를 선택하세요');selectOptions($('coachEvent'),EVENTS);$('coachEvent').addEventListener('change',renderCoachPreview);showRank();renderAuth();for(const b of document.querySelectorAll('[data-auth]'))b.addEventListener('click',()=>{authMode=b.dataset.auth;renderAuth();});$('authPin').addEventListener('input',e=>e.target.value=e.target.value.replace(/\D/g,'').slice(0,4));$('nextStudentPin').addEventListener('input',e=>e.target.value=e.target.value.replace(/\D/g,'').slice(0,4));$('authForm').addEventListener('submit',authSubmit);$('nextStudentForm').addEventListener('submit',nextStudentLogin);document.addEventListener('click',e=>{let b=e.target.closest('[data-action]');if(b)action(b.dataset.action);let m=e.target.closest('[data-save-mode]');if(m){saveMode=m.dataset.saveMode;renderMode();}});
+ $('teacherUnlock').addEventListener('click',teacherUnlock);$('teacherSave').addEventListener('click',saveTeacher);$('teacherHistoryToggle').addEventListener('click',toggleTeacherHistory);$('teacherHistoryDelete').addEventListener('click',()=>deleteHistoryRecord('teacher'));$('teacherTimerStart').addEventListener('click',startTeacherTimer);$('teacherTimerStop').addEventListener('click',()=>stopTeacherTimer(true));$('teacherManualAdd').addEventListener('click',addTabletCandidate);$('teacherSavingClose').addEventListener('click',closeTeacherSaving);document.querySelectorAll('[data-teacher-method]').forEach(button=>button.addEventListener('click',()=>setTeacherMeasureMode(button.dataset.teacherMethod)));$('teacherSettings').addEventListener('click',populationPanel);$('populationSave').addEventListener('click',savePopulation);
+ $('cameraToggle').addEventListener('click',()=>cameraActive?stopCamera():cameraStart());$('cameraFlip').addEventListener('click',async()=>{if(state==='running'){toast('측정 중 카메라는 전환할 수 없습니다.');return;}cameraFacing=cameraFacing==='user'?'environment':'user';if(cameraActive){stopCamera();await cameraStart();}});$('cameraSoundTest').addEventListener('click',()=>{audio();playSignal('ready');setTimeout(()=>playSignal('end'),1100);toast('🔊 준비음 → 종료음 순서로 재생합니다.');});$('soundVolume').addEventListener('input',e=>setText('soundVolumeLabel',e.target.value+'%'));$('cameraReset').addEventListener('click',cameraReset);$('pendingSave').addEventListener('click',()=>saveMeasurement(pendingMeasurement));$('pendingDiscard').addEventListener('click',()=>{pendingMeasurement=null;$('cameraPending').classList.add('hidden');cameraReset();toast('저장하지 않고 새 측정을 준비합니다.');});$('testStart').addEventListener('click',()=>{if(state==='running'){toast('이미 측정 중입니다.');return;}audio();cameraReset();testTimer=true;playSignal('ready');beginTiming('test');const f=()=>{if(state==='running'&&testTimer){setText('cameraTime',fmt((performance.now()-clockStart)/1000));requestAnimationFrame(f);}};requestAnimationFrame(f);});$('testStop').addEventListener('click',()=>finishTiming('test'));
+ $('aiHistoryToggle').addEventListener('click',toggleAiHistory);$('aiHistoryDelete').addEventListener('click',()=>deleteHistoryRecord('ai'));$('aiHistoryRegister').addEventListener('click',registerAiHistoryRecord);
+ $('coachShowRecords').addEventListener('click',renderCoachRecords);$('coachCopyOpen').addEventListener('click',()=>copyCoach(true));$('coachCopy').addEventListener('click',()=>copyCoach(false));$('coachOpen').addEventListener('click',()=>window.open(CHATGPT_URL,'_blank'));
+ window.addEventListener('pagehide',stopCamera);document.addEventListener('visibilitychange',()=>{if(document.hidden&&state==='running')stopCamera();});
+}
+let adminMode=false,adminTask='measure',adminNotes=[],adminUser=null,adminLookupEpoch=0,adminSavedStudent=null;
+function adminToday(){return new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
+function openAdmin(){if(!adminMode){adminSavedStudent={uid:currentUserUid,session,studentToken};adminMode=true;teacherVerified=false;teacherToken='';teacherSchool='';adminUser=null;adminNotes=[];currentUserUid='';}showPage('admin');$('adminGate').classList.toggle('hidden',teacherVerified);$('adminBody').classList.toggle('hidden',!teacherVerified);$('adminExit').classList.toggle('hidden',!teacherVerified);setText('adminIdentity',teacherVerified?'🏫 '+teacherSchool+' · 교사 인증 완료':'👩‍🏫 교사 관리 모드');}
+function endAdmin(){adminLookupEpoch++;if(teacherTimerActive)stopTeacherTimer(false);teacherVerified=false;teacherToken='';teacherSchool='';adminMode=false;adminUser=null;adminNotes=[];currentUserUid=adminSavedStudent?.uid||'';session=adminSavedStudent?.session||null;studentToken=adminSavedStudent?.studentToken||'';adminSavedStudent=null;$('adminCode').value='';$('adminStudentPanel').classList.add('hidden');$('adminPopulationPanel').classList.add('hidden');showPage('home');showRank();}
+async function adminAuthenticate(evt){evt.preventDefault();const button=$('adminAuthSubmit');if(button.disabled)return;const epoch=++adminLookupEpoch;button.disabled=true;setText('adminAuthStatus','⏳ 관리번호를 확인하고 있습니다.');try{if(!REMOTE)throw Error('교사 관리 모드는 서버 연결 후 이용해 주세요.');const school=$('adminSchool').value,r=await remoteWrite('teacherLogin',{school,code:$('adminCode').value.trim()});if(epoch!==adminLookupEpoch||!adminMode)return;if(!r.teacherToken)throw Error('교사 인증 결과를 확인하지 못했습니다.');teacherToken=r.teacherToken;teacherSchool=school;teacherVerified=true;$('adminCode').value='';setText('adminSchoolTitle','🏫 '+school+' 관리');openAdmin();setText('adminAuthStatus','');}catch(e){setText('adminAuthStatus','⚠️ '+e.message);}finally{button.disabled=false;}}
+function adminChooseTask(task){if(!teacherVerified||!adminMode)return;adminLookupEpoch++;adminTask=task;adminUser=null;adminNotes=[];currentUserUid='';$('adminStudentPanel').classList.toggle('hidden',task==='population');$('adminPopulationPanel').classList.toggle('hidden',task!=='population');$('adminEditArea').classList.add('hidden');$('adminEditNotes').classList.add('hidden');$('adminNick').value='';setText('adminStudentStatus','');setText('adminTaskTitle',task==='measure'?'⏱️ 학생 측정하기':'📝 학생 기록 수정');if(task==='population')$('adminPopulation').value=schoolPop[teacherSchool]||1;showPage('admin');}
+async function adminLookup(evt){evt.preventDefault();const button=$('adminLookupSubmit');if(button.disabled)return;button.disabled=true;const epoch=++adminLookupEpoch;adminUser=null;currentUserUid='';$('adminEditArea').classList.add('hidden');$('adminEditNotes').classList.add('hidden');setText('adminStudentStatus','⏳ 학생 기록을 불러오고 있습니다.');try{const r=await remoteWrite('teacherStudent',{teacherToken,nick:$('adminNick').value.trim()});if(epoch!==adminLookupEpoch)return;if(!r.user||r.user.school!==teacherSchool)throw Error('해당 학교의 학생을 확인하지 못했습니다.');adminUser=r.user;currentUserUid=r.user.uid;const index=users.findIndex(u=>u.uid===r.user.uid);if(index<0)users.push(r.user);else users[index]=r.user;records=records.filter(x=>x.uid!==r.user.uid).concat(r.records||[]);adminNotes=r.notes||[];holdIdentity();setText('adminStudentStatus','✅ '+r.user.school+' · '+r.user.grade+'학년 · '+r.user.nick);if(adminTask==='measure'){openTeacher();renderAdminNotes($('adminMeasureNotes'),false);}else{$('adminEditArea').classList.remove('hidden');$('adminEditNotes').classList.remove('hidden');renderAdminRecords();renderAdminNotes($('adminEditNotes'),true);}}catch(e){if(epoch===adminLookupEpoch)setText('adminStudentStatus','⚠️ '+e.message);}finally{button.disabled=false;}}
+function adminNoteDate(value){const raw=String(value||'');if(/^\d{4}-\d{2}-\d{2}$/.test(raw))return raw;const parsed=new Date(raw);return Number.isFinite(parsed.getTime())?new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(parsed):'';}
+function adminNoteDateLabel(value){const date=adminNoteDate(value);if(!date)return '날짜 확인 필요';const [year,month,day]=date.split('-').map(Number);return year+'년 '+month+'월 '+day+'일';}
+function adminNoteTimeLabel(value){const date=new Date(value);return Number.isFinite(date.getTime())?new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',year:'numeric',month:'long',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true}).format(date):'';}
+function renderAdminNotes(container,editable){container.replaceChildren();if(!adminMode||!adminUser)return;const heading=el('h3','','📒 수업 특이사항'),form=el('form'),dateWrap=el('div','field'),dateLabel=el('label','','📅 수업 날짜'),date=el('input'),bodyWrap=el('div','field'),bodyLabel=el('label','','✏️ 지도·관찰 내용'),body=el('textarea'),save=el('button','btn primary','💾 특이사항 저장');date.type='date';date.value=adminToday();date.required=true;dateLabel.append(date);dateWrap.append(dateLabel);body.rows=3;body.maxLength=2000;body.required=true;body.placeholder='참여 모습, 지도 내용, 다음 수업 참고사항을 기록해 주세요.';bodyLabel.append(body);bodyWrap.append(bodyLabel);form.append(dateWrap,bodyWrap,save);form.addEventListener('submit',e=>{e.preventDefault();adminSaveNote('',date.value,body.value,save,container,editable);});container.append(heading,form,el('h3','','📅 이전 저장 목록'));const list=el('div','adminNoteList');list.setAttribute('aria-label','날짜별 수업 특이사항');if(!adminNotes.length)list.append(el('p','hint','아직 저장된 수업 특이사항이 없습니다.'));adminNotes.forEach(note=>{const details=el('details','adminNoteRow'),summary=el('summary','',adminNoteDateLabel(note.date)+' · '+note.text.replace(/\s+/g,' ').slice(0,36));details.append(summary);const savedTime=adminNoteTimeLabel(note.updatedAt||note.createdAt);if(savedTime)details.append(el('p','hint','저장일시: '+savedTime));if(editable){const f=el('form'),label=el('label','fieldLabel','수업 날짜'),d=el('input'),tlabel=el('label','fieldLabel','특이사항 내용'),t=el('textarea'),b=el('button','btn outline small','💾 수정 저장');d.type='date';d.value=adminNoteDate(note.date);d.required=true;t.value=note.text;t.rows=3;t.maxLength=2000;t.required=true;label.append(d);tlabel.append(t);f.append(label,tlabel,b);f.addEventListener('submit',e=>{e.preventDefault();adminSaveNote(note.id,d.value,t.value,b,container,editable);});details.append(f);}else{const text=el('p','hint',note.text);text.style.whiteSpace='pre-wrap';details.append(text);}list.append(details);});container.append(list);}
+async function adminSaveNote(noteId,date,text,button,container,editable){if(button.disabled||!adminUser)return;const uid=adminUser.uid;button.disabled=true;try{const r=await remoteWrite('teacherSaveNote',{teacherToken,uid,noteId,date,text});if(adminUser?.uid!==uid)return;adminNotes=r.notes||[];renderAdminNotes(container,editable);toast('✅ 수업 특이사항을 저장했습니다.');}catch(e){toast('⚠️ '+e.message);}finally{button.disabled=false;}}
+function renderAdminRecords(){const box=$('adminRecordList');box.replaceChildren();const list=records.filter(r=>r.uid===adminUser?.uid).sort((a,b)=>new Date(b.at)-new Date(a.at));if(!list.length)box.append(el('p','hint','아직 저장된 기록이 없습니다.'));for(const record of list){const row=el('div','panel adminRecordRow'),title=el('div','',new Date(record.at).toLocaleString('ko-KR')+' · '+record.event+' · '+(record.valid?'공식 기록':'연습·미등록 기록')),value=el('p','fieldLabel','⏱️ '+fmt(record.sec)+'초'),button=el('button','btn red small','🗑️ 기록 삭제');button.type='button';row.append(title,value,button);button.addEventListener('click',async()=>{if(button.disabled)return;if(!window.confirm(record.event+' '+fmt(record.sec)+'초 기록을 삭제하시겠습니까?'))return;button.disabled=true;try{const r=await remoteWrite('teacherDeleteRecord',{teacherToken,uid:record.uid,recordId:record.id});if(r.deletedId!==record.id)throw Error('삭제 결과를 확인하지 못했습니다.');records=records.filter(x=>x.id!==record.id);showRank();if(adminUser?.uid===record.uid)renderAdminRecords();toast('✅ 학생 기록을 삭제했습니다.');}catch(err){toast('⚠️ '+err.message);}finally{button.disabled=false;}});box.append(row);}}
+async function adminSavePopulation(evt){evt.preventDefault();const button=$('adminPopulationSave');if(button.disabled)return;button.disabled=true;try{const value=Number($('adminPopulation').value);if(!Number.isInteger(value)||value<1||value>20000)throw Error('참가학생 수는 1~20000 사이로 입력해 주세요.');const r=await remoteWrite('population',{teacherToken,counts:{[teacherSchool]:value}});if(Number(r.schoolPop?.[teacherSchool])!==value)throw Error('인원수 저장 결과를 확인하지 못했습니다.');schoolPop[teacherSchool]=value;showRank();toast('✅ '+teacherSchool+' 참가학생 수를 저장했습니다.');}catch(e){toast('⚠️ '+e.message);}finally{button.disabled=false;}}
+function setupAdmin(){selectOptions($('adminSchool'),SCHOOLS,'학교를 선택하세요');$('adminAuthForm').addEventListener('submit',adminAuthenticate);$('adminLookupForm').addEventListener('submit',adminLookup);$('adminPopulationForm').addEventListener('submit',adminSavePopulation);$('adminExit').addEventListener('click',endAdmin);document.addEventListener('click',e=>{const b=e.target.closest('[data-admin]');if(!b)return;const target=b.dataset.admin;if(target==='open')openAdmin();else if(target==='home')endAdmin();else if(target==='menu')openAdmin();else if(target==='next'){adminChooseTask('measure');}else if(target==='student'){if(adminMode)endAdmin();$('loginAnchor').classList.remove('hidden');$('loginAnchor').scrollIntoView({behavior:'smooth',block:'start'});}else adminChooseTask(target);});}
+
+setup();
+setupAdmin();
+})();
+</script>
+</body></html>
+
