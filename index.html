@@ -947,7 +947,7 @@ async function restoreAdminResume(){
  adminMode=true;teacherSchool=saved.school;teacherVerified=false;openAdmin();$('adminSchool').value=saved.school;setText('adminAuthStatus','⏳ 관리 화면을 복원하고 있습니다.');
  try{
   const verified=await remoteWrite('teacherStudents',{teacherToken:saved.token});
-  if(!adminMode)return;teacherToken=saved.token;teacherSchool=saved.school;teacherVerified=true;openAdmin();setText('adminAuthStatus','');
+  if(!adminMode)return;teacherToken=saved.token;teacherSchool=saved.school;teacherVerified=true;openAdmin();setText('adminSchoolTitle','🏫 '+teacherSchool+' 관리');setText('adminAuthStatus','');
   if(saved.task!=='menu')adminChooseTask(saved.task);
   if([1,2,3].includes(Number(saved.grade)))adminRosterGrade=Number(saved.grade);
   if(saved.task==='edit'){adminRoster=(verified.users||[]).filter(u=>u.school===teacherSchool);renderAdminRoster();if(saved.uid)await adminSelectStudent({uid:saved.uid});if(saved.uid&&EVENTS.includes(saved.event)){adminRecordEvent=saved.event;renderAdminRecords();}}
